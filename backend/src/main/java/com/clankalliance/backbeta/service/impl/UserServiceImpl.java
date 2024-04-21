@@ -5,19 +5,13 @@ import com.clankalliance.backbeta.repository.UserRepository;
 import com.clankalliance.backbeta.response.CommonResponse;
 import com.clankalliance.backbeta.service.TencentService;
 import com.clankalliance.backbeta.service.UserService;
-import com.clankalliance.backbeta.utils.ErrorHandle;
 import com.clankalliance.backbeta.utils.SnowFlake;
 import com.clankalliance.backbeta.utils.StatusManipulateUtilsWithRedis.ManipulateUtilRedis;
 import com.clankalliance.backbeta.utils.TokenUtil;
-import org.apache.commons.codec.digest.DigestUtils;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,9 +19,6 @@ public class UserServiceImpl implements UserService {
 
     @Resource
     private TokenUtil tokenUtil;
-
-    @Resource
-    private UserService userService;
 
     @Resource
     private UserRepository userRepository;
@@ -54,12 +45,12 @@ public class UserServiceImpl implements UserService {
         String code;
         if(uop.isPresent()){
             user = uop.get();
-            code = ManipulateUtil.updatePhoneStatus("" + user.getId(), "" + phone);
+            code = ManipulateUtil.updatePhoneStatus(String.valueOf(user.getId()), String.valueOf(phone));
         }else{
             //用户不存在：用R作为占位符
-            code = ManipulateUtil.updatePhoneStatus("R", "" + phone);
+            code = ManipulateUtil.updatePhoneStatus("R", String.valueOf(phone));
         }
-        tencentService.sendSms("" + phone,code);
+        tencentService.sendSms(String.valueOf(phone),code);
         response.setSuccess(true);
         response.setMessage("已发送验证码");
         return response;
@@ -78,10 +69,16 @@ public class UserServiceImpl implements UserService {
             return response;
         Optional<User> uop = userRepository.findUserById(Long.parseLong(response.getMessage()));
         if(uop.isEmpty()){
-            //TODO: 用户不存在，创建用户
+            User newUser = new User(snowFlake.nextId(), "默认用户名", phone, false, new ArrayList<>());
+            try{
+                userRepository.save(newUser);
+            }catch (Exception e){
+                return CommonResponse.errorResponse("保存失败", response, e);
+            }
         }else{
-            //TODO: 用户存在，登录
+            response.setMessage("登录成功");
         }
+
         return response;
     }
 

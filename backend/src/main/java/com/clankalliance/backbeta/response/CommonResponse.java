@@ -29,6 +29,13 @@ public class CommonResponse<T1> {
         return new CommonResponse(false,errorMessage,null,null, true);
     }
 
+    public static CommonResponse errorResponse(String errorMessage, CommonResponse oldResponse, Exception e){
+        oldResponse.setMessage(errorMessage);
+        oldResponse.setSuccess(false);
+        oldResponse.setContent(e);
+        return oldResponse;
+    }
+
     public static CommonResponse errorResponse(String errorMessage, CommonResponse oldResponse){
         oldResponse.setMessage(errorMessage);
         oldResponse.setSuccess(false);

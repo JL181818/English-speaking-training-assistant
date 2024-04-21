@@ -38,7 +38,7 @@ public class TokenUtil {
 
     public CommonResponse phoneCodeCheck(long phone, String code){
         CommonResponse response = new CommonResponse();
-        String id = manipulateUtil.getIdByPhone("" + phone, code);
+        String id = manipulateUtil.getIdByPhone(String.valueOf(phone), code);
         if(id == null){
             response.setMessage("验证码不正确");
             response.setSuccess(false);

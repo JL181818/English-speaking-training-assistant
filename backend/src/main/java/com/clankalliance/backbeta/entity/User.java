@@ -1,5 +1,6 @@
 package com.clankalliance.backbeta.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
@@ -19,7 +20,7 @@ import java.util.List;
 public class User {
     //为避免long传向前台出现精度丢失，通过注释将long化为String
     @Id
-    @JsonSerialize(using= ToStringSerializer.class)
+    @JsonIgnore
     private long id;
 
     @Size(max = 50)
@@ -33,6 +34,7 @@ public class User {
 
     //切断循环引用
     @OneToMany
+    @JsonIgnore
     @JsonIgnoreProperties("user")
     private List<TrainingData> trainingDataList;
 
