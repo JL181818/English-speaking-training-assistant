@@ -23,22 +23,22 @@ public class UserController {
 
 
 
-    @PostMapping("/tokenCheck")
+    @PostMapping("/tokencheck")
     public CommonResponse tokenCheck(@RequestBody TokenCheckRequest request){
         return tokenUtil.tokenCheck(request.getToken());
     }
 
-    @PostMapping("/loginPhone")
+    @PostMapping("/phonecode")
     public CommonResponse handlePhoneLogin(@RequestBody PhoneCheckRequest request){
         return userService.handlePhoneLogin(request.getPhone());
     }
 
-    @PostMapping("/loginCode")
+    @PostMapping("/phonelogin")
     public CommonResponse handleCodeLogin(@RequestBody PhoneCheckRequest request){
         return userService.handleCodeLogin(request.getPhone(), request.getCode());
     }
 
-    @PostMapping("/myInfo")
+    @PostMapping("/myinfo")
     public CommonResponse handleGetInfo(@RequestBody TokenCheckRequest request){
         return userService.handleGetInfo(request.getToken());
     }
