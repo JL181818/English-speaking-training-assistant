@@ -1,12 +1,19 @@
 package com.clankalliance.backbeta.controller;
 
+import antlr.Utils;
+import com.clankalliance.backbeta.entity.Dialog;
+import com.clankalliance.backbeta.entity.TrainingData;
 import com.clankalliance.backbeta.entity.User;
+import com.clankalliance.backbeta.repository.DialogRepository;
+import com.clankalliance.backbeta.repository.TrainingDataRepository;
+import com.clankalliance.backbeta.repository.UserRepository;
 import com.clankalliance.backbeta.response.CommonResponse;
 import com.clankalliance.backbeta.service.UserService;
 import com.clankalliance.backbeta.utils.RedisUtils;
 import com.clankalliance.backbeta.utils.TokenUtil;
 import com.clankalliance.backbeta.utils.Websocket.SocketDomain;
 import io.netty.util.internal.StringUtil;
+import org.apache.poi.ss.formula.functions.T;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -20,10 +27,9 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
-import java.util.Map;
-import java.util.StringJoiner;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-
+//xxx.cn/websocket/123456
 @Component
 @ServerEndpoint("/websocket/{token}")
 public class WebSocketServer {
@@ -49,10 +55,24 @@ public class WebSocketServer {
 //    public void setRedisTemplateIdRoomCode(StringRedisTemplate redisTemplateIdRoomCode){WebSocketServer.RedisTemplateIdRoomCode = redisTemplateIdRoomCode;}
 
 
+
+
+    /**
+     * key: userId
+     * value: list<dialog>
+     */
+    private static StringRedisTemplate redisTemplateUserRoom;
+
+
+    @Resource
+    public void setRedisTemplateUserRoom(StringRedisTemplate redisTemplateUserRoom){WebSocketServer.redisTemplateUserRoom = redisTemplateUserRoom;}
+
     private static UserService userService;
 
     @Resource
     public void setUserService(UserService userService){WebSocketServer.userService = userService;}
+
+
 
     private static final Logger logger = LoggerFactory.getLogger(WebSocketServer.class);
     //在线客户端数目
@@ -62,7 +82,35 @@ public class WebSocketServer {
 
     private Session session;
 
+    private UserRepository userRepository;
+
+    private TrainingDataRepository trainingDataRepository;
+
+    private DialogRepository dialogRepository;
+
     private String userId = "";
+
+    private String AI = "123";
+
+    private boolean isAckSay = true;
+
+    private boolean isAckCorr = true;
+
+    private long startTimeSay;
+
+    private long startTimeCorr;
+
+    /*
+    userId 若为用户，对应唯一一个房间号，一个房间号对应一个房间信息
+    房间信息存储用户和AI的训练对话内容
+    userId,AI对应不同的对话内容
+    */
+
+    private String modelTestSay(String input){
+        return "AI回复";
+    }
+
+    private String modelTestCorr(String input){ return "AI纠错";}
 
     @OnOpen
     public void onOpen(Session session, @PathParam("token") String token){
@@ -73,7 +121,7 @@ public class WebSocketServer {
             sendMessage("loginFail");
             return;
         }
-        String targetId = response.getMessage();
+        String targetId = response.getMessage(); //message里存储用户Id
         if(!websocketMap.containsKey(targetId)){
             onlineCount ++;
         }
@@ -82,7 +130,9 @@ public class WebSocketServer {
         socketDomain.setSession(session);
         socketDomain.setUri(session.getRequestURI().toString());
         websocketMap.put(userId, socketDomain);
+        isAckSay = true;
         logger.info("id为" + userId + "的用户连接，当前人数为" + onlineCount);
+        //startTraining(targetId);  //
     }
 
     @OnClose
@@ -92,17 +142,120 @@ public class WebSocketServer {
             onlineCount --;
             logger.info("id为" + userId + "的用户断开连接，当前人数为" + onlineCount);
         }
+
+        //断开连接后，会把数据存到数据库
+        List<Dialog> dialogs = RedisUtils.getList(userId,redisTemplateUserRoom,Dialog.class);
+        //将dialog存入数据库
+
+        dialogRepository.saveAll(dialogs);
+
+        TrainingData trainingData = new TrainingData();
+        trainingData.setUser(userRepository.findUserById(Long.parseLong(userId)).get());
+        trainingData.setDialogs(dialogs);
+
+
+        //调用接口，获取score
+        //将trainingData存入数据库
+        trainingDataRepository.save(trainingData);
+
+
+        redisTemplateUserRoom.delete(userId);
+
+
         //TODO: 用户断开连接Websocket客户端后，会调用该函数
 
     }
 
     @OnMessage
     public void onMessage(String message, Session session){
-        //TODO: 用户向Websocket客户端发送消息，会调用该函数
+        //TODO: ack#say#{AI消息序号}，用户向Websocket客户端发送消息，会调用该函数
+        String[] request;
+        request = message.split("#");
+
+        //后续存储在MySQL里的时候，只需要判断dialog的sender是否为AI就可以吧
+
+        if(request[0].equals("ack")){
+            if(request[1].equals("say")){
+                //TODO：格式ack#say#{AI消息序号} 发过去的回应被收到了
+                isAckSay = true;//接收到了ack才能继续
+
+            }else if(request[1].equals("corr")){
+
+                isAckCorr = true;
+
+            }else{
+                throw new RuntimeException();
+            }
+
+
+
+        }else if(request[0].equals("say")&&isAckSay&&isAckCorr){
+            //格式say#{用户消息序号}#{用户回应}，用户传来文本,需要调用大模型
+
+            //TODO:先把用户的文本存一个dialog
+            redisStor(userId,userId,request[2]);
+            //收到用户的say后向用户回确认
+            String messageToUser = "ack#say#{用户消息序号}";
+            sendMessageTo(userId,messageToUser);
+
+            //TODO:存储大模型纠错作为一个dialog
+            //纠错我就理解为对一个dialog纠错了
+            String content = modelTestCorr(request[2]);
+            redisStor(userId,AI,content);
+            messageToUser = "corr#{用户消息序号}#"+content;
+            isAckCorr = false;
+            sendMessageTo(userId,messageToUser);
+            startTimeCorr = System.currentTimeMillis();
+            while(!isAckCorr&&((System.currentTimeMillis()-startTimeCorr)/1000)>5){
+                //当没收到ack并且已经过了5秒了，超时重传
+                sendMessageTo(userId,messageToUser);
+                startTimeCorr = System.currentTimeMillis();
+            }
+
+            //TODO：存储大模型说的话返回结果为一个dialog
+            //这里实际上要把redis中的数据拿出来给大模型，是否为直接转成字符串？
+            //需要什么格式，下面仅是个测试
+            content = modelTestSay("AI回复");
+            redisStor(userId,AI,content);
+
+            //向用户发送AI回复
+            messageToUser = "say#{AI消息序号}#"+content;
+            sendMessageTo(userId,messageToUser);
+            isAckSay = false;
+            startTimeSay = System.currentTimeMillis();
+            while(!isAckSay&&((System.currentTimeMillis()-startTimeSay)/1000)>5){
+                //当没收到ack并且已经过了5秒了
+                sendMessageTo(userId,messageToUser);
+                startTimeSay = System.currentTimeMillis();
+            }
+        }
         if(!StringUtil.isNullOrEmpty(message)){
             logger.info("收到id为" + userId + "的用户发来消息：" + message);
+
         }
     }
+
+    private void redisStor(String userId,String senderId,String content){
+        Date currentTimeUser = new Date();
+        Dialog dialogUser = new Dialog();
+        User sender = new User();
+        Optional <User> uop = userRepository.findUserById(Long.parseLong(senderId));
+        if(uop.isEmpty()){
+            sendMessage("用户不存在"); //这不能不存在吧，token都找到了，需要异常处理吗？
+        }else{
+            sender = uop.get();
+        }
+        boolean keyExists = redisTemplateUserRoom.hasKey(userId);
+
+        dialogUser.setSender(sender);
+        dialogUser.setContent(content);
+        dialogUser.setTime(currentTimeUser);
+        //没有userId这个键值，会自己创建一个空的吧
+        RedisUtils.add(userId,dialogUser,redisTemplateUserRoom);
+        }
+
+
+
 
 
     private void sendMessage(String obj){
@@ -142,6 +295,9 @@ public class WebSocketServer {
             }
         }
     }
+
+
+
     //给外部调用的方法接口
     public void sendAll(String Message){
         sendMessageToAll(Message);
