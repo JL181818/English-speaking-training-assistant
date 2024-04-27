@@ -8,6 +8,7 @@ import com.clankalliance.backbeta.repository.DialogRepository;
 import com.clankalliance.backbeta.repository.TrainingDataRepository;
 import com.clankalliance.backbeta.repository.UserRepository;
 import com.clankalliance.backbeta.response.CommonResponse;
+import com.clankalliance.backbeta.service.AIService;
 import com.clankalliance.backbeta.service.UserService;
 import com.clankalliance.backbeta.utils.RedisUtils;
 import com.clankalliance.backbeta.utils.TokenUtil;
@@ -29,6 +30,9 @@ import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static com.clankalliance.backbeta.service.UserService.AI_USER;
+
 //xxx.cn/websocket/123456
 @Component
 @ServerEndpoint("/websocket/{token}")
@@ -90,7 +94,6 @@ public class WebSocketServer {
 
     private String userId = "";
 
-    private String AI = "123";
 
     private boolean isAckSay = true;
 
@@ -151,8 +154,9 @@ public class WebSocketServer {
 
         TrainingData trainingData = new TrainingData();
         trainingData.setUser(userRepository.findUserById(Long.parseLong(userId)).get());
+        Date currentTimeUser = new Date();
+        trainingData.setTime(currentTimeUser);
         trainingData.setDialogs(dialogs);
-
 
         //调用接口，获取score
         //将trainingData存入数据库
@@ -192,17 +196,12 @@ public class WebSocketServer {
         }else if(request[0].equals("say")&&isAckSay&&isAckCorr){
             //格式say#{用户消息序号}#{用户回应}，用户传来文本,需要调用大模型
 
-            //TODO:先把用户的文本存一个dialog
-            redisStor(userId,userId,request[2]);
-            //收到用户的say后向用户回确认
-            String messageToUser = "ack#say#{用户消息序号}";
-            sendMessageTo(userId,messageToUser);
+           String messageToUser;
 
             //TODO:存储大模型纠错作为一个dialog
-            //纠错我就理解为对一个dialog纠错了
-            String content = modelTestCorr(request[2]);
-            redisStor(userId,AI,content);
-            messageToUser = "corr#{用户消息序号}#"+content;
+            String correction = modelTestCorr(request[2]);
+
+            messageToUser = "corr#{用户消息序号}#"+correction;
             isAckCorr = false;
             sendMessageTo(userId,messageToUser);
             startTimeCorr = System.currentTimeMillis();
@@ -212,11 +211,26 @@ public class WebSocketServer {
                 startTimeCorr = System.currentTimeMillis();
             }
 
+            User user = new User();
+            Optional <User> uop = userRepository.findUserById(Long.parseLong(userId));
+            if(uop.isEmpty()){
+                sendMessage("用户不存在"); //这不能不存在吧，token都找到了，需要异常处理吗？
+            }else{
+                user = uop.get();
+            }
+
+
+            //TODO:先把用户的文本存一个dialog
+            redisStor(userId,user,request[2],correction);
+            //收到用户的say后向用户回确认
+            messageToUser = "ack#say#{用户消息序号}";
+            sendMessageTo(userId,messageToUser);
+
             //TODO：存储大模型说的话返回结果为一个dialog
             //这里实际上要把redis中的数据拿出来给大模型，是否为直接转成字符串？
             //需要什么格式，下面仅是个测试
-            content = modelTestSay("AI回复");
-            redisStor(userId,AI,content);
+            String content = modelTestSay("AI回复");
+            redisStor(userId,AI_USER,content,"");
 
             //向用户发送AI回复
             messageToUser = "say#{AI消息序号}#"+content;
@@ -235,21 +249,13 @@ public class WebSocketServer {
         }
     }
 
-    private void redisStor(String userId,String senderId,String content){
+    private void redisStor(String userId,User sender,String content,String correction){
         Date currentTimeUser = new Date();
         Dialog dialogUser = new Dialog();
-        User sender = new User();
-        Optional <User> uop = userRepository.findUserById(Long.parseLong(senderId));
-        if(uop.isEmpty()){
-            sendMessage("用户不存在"); //这不能不存在吧，token都找到了，需要异常处理吗？
-        }else{
-            sender = uop.get();
-        }
-        boolean keyExists = redisTemplateUserRoom.hasKey(userId);
-
         dialogUser.setSender(sender);
         dialogUser.setContent(content);
         dialogUser.setTime(currentTimeUser);
+        dialogUser.setCorrection(correction);
         //没有userId这个键值，会自己创建一个空的吧
         RedisUtils.add(userId,dialogUser,redisTemplateUserRoom);
         }
