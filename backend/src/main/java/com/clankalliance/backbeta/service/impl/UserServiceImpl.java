@@ -10,6 +10,7 @@ import com.clankalliance.backbeta.utils.StatusManipulateUtilsWithRedis.Manipulat
 import com.clankalliance.backbeta.utils.TokenUtil;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -31,6 +32,14 @@ public class UserServiceImpl implements UserService {
 
     @Resource
     private SnowFlake snowFlake;
+
+
+
+    @PostConstruct
+    public void init(){
+        userRepository.save(AI_USER);
+        userRepository.save(TEST_USER);
+    }
 
     /**
      * 手机登录 发送验证码方法
