@@ -49,22 +49,5 @@ public class UserController {
         return userService.handleGetInfo(request.getToken());
     }
 
-    @PostMapping("/test")
-    public CommonResponse test(@RequestBody TokenCheckRequest request){
-        return CommonResponse.successResponse(
-                aiService.invokeModel(
-                    new TrainingData(
-                            "",
-                            new Date(),
-                            UserService.TEST_USER,
-                            1,
-                            List.of(new Dialog[]{
-                                    new Dialog("1", new Date(), "Hello", UserService.TEST_USER, null)
-                                }
-                            )
-                    )
-                )
-        );
-    }
 
 }

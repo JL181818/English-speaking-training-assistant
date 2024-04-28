@@ -24,16 +24,5 @@ class AIServiceImplTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Test
-    void invokeModel() {
-        System.out.println(service.invokeModel(
-                new TrainingData(
-                        "",
-                        new Date(),
-                        UserService.TEST_USER,
-                        1,
-                        List.of(new Dialog[]{
-                                new Dialog("1", new Date(), "Hello", UserService.TEST_USER, null)
-                        }))));
-    }
+
 }

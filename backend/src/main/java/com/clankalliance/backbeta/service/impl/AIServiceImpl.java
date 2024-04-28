@@ -1,7 +1,9 @@
 package com.clankalliance.backbeta.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.clankalliance.backbeta.entity.Dialog;
 import com.clankalliance.backbeta.entity.TrainingData;
+import com.clankalliance.backbeta.entity.User;
 import com.clankalliance.backbeta.request.model.InvokeModelRequest;
 import com.clankalliance.backbeta.service.AIService;
 import org.apache.http.HttpEntity;
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 @Service
 public class AIServiceImpl implements AIService {
@@ -27,8 +30,8 @@ public class AIServiceImpl implements AIService {
     public void setModelBaseUrl(String url){MODEL_BASE_URL = url;}
 
     @Override
-    public String invokeModel(TrainingData trainingData) {
-        InvokeModelRequest request = new InvokeModelRequest(trainingData);
+    public String invokeModel(User user, List<Dialog> dialogs) {
+        InvokeModelRequest request = new InvokeModelRequest(user, dialogs);
 
         // 创建httpclient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();

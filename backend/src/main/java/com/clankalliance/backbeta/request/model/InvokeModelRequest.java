@@ -2,6 +2,7 @@ package com.clankalliance.backbeta.request.model;
 
 import com.clankalliance.backbeta.entity.Dialog;
 import com.clankalliance.backbeta.entity.TrainingData;
+import com.clankalliance.backbeta.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,10 +32,10 @@ public class InvokeModelRequest {
     private Boolean skip_special_tokens;
     private Integer top_k;
 
-    public InvokeModelRequest(TrainingData trainingData){
+    public InvokeModelRequest(User user, List<Dialog> dialogs){
         model = "internlm2";
         messages = new ArrayList<>();
-        for(Dialog d: trainingData.getDialogs()){
+        for(Dialog d: dialogs){
             messages.add(new ModelMessage(d));
         }
         temperature = 0.7;
@@ -45,7 +46,7 @@ public class InvokeModelRequest {
         stream = false;
         presence_penalty = 0;
         frequency_penalty = 0;
-        user = trainingData.getUser().getNickName();
+        this.user = user.getNickName();
         repetition_penalty = 1;
         session_id = -1;
         ignore_eos = false;
