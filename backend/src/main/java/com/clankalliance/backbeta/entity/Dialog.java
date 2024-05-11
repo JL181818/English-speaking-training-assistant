@@ -30,4 +30,6 @@ public class Dialog {
 
     private String correction;
 
+    private Double score;
+
 }

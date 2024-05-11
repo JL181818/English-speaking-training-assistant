@@ -1,6 +1,7 @@
 package com.clankalliance.backbeta.request.model;
 
 import com.clankalliance.backbeta.entity.Dialog;
+import com.clankalliance.backbeta.redisDataBody.DialogDataBody;
 import com.clankalliance.backbeta.service.UserService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,9 +15,9 @@ public class ModelMessage {
     private String content;
     private String role;
 
-    public ModelMessage(Dialog d){
+    public ModelMessage(DialogDataBody d){
         content = d.getContent();
-        role = d.getSender().getId() == UserService.AI_USER.getId()? "assistant": "user";
+        role = d.getSenderId() == UserService.AI_USER.getId()? "assistant": "user";
     }
 
 }

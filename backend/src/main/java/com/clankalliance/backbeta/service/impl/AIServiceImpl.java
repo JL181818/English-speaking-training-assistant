@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.clankalliance.backbeta.entity.Dialog;
 import com.clankalliance.backbeta.entity.TrainingData;
 import com.clankalliance.backbeta.entity.User;
+import com.clankalliance.backbeta.redisDataBody.DialogDataBody;
 import com.clankalliance.backbeta.request.model.InvokeModelRequest;
 import com.clankalliance.backbeta.service.AIService;
 import org.apache.http.HttpEntity;
@@ -30,7 +31,7 @@ public class AIServiceImpl implements AIService {
     public void setModelBaseUrl(String url){MODEL_BASE_URL = url;}
 
     @Override
-    public String invokeModel(User user, List<Dialog> dialogs) {
+    public String invokeModel(User user, List<DialogDataBody> dialogs) {
         InvokeModelRequest request = new InvokeModelRequest(user, dialogs);
 
         // 创建httpclient对象

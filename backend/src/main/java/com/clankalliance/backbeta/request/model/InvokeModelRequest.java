@@ -3,6 +3,7 @@ package com.clankalliance.backbeta.request.model;
 import com.clankalliance.backbeta.entity.Dialog;
 import com.clankalliance.backbeta.entity.TrainingData;
 import com.clankalliance.backbeta.entity.User;
+import com.clankalliance.backbeta.redisDataBody.DialogDataBody;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,10 +33,10 @@ public class InvokeModelRequest {
     private Boolean skip_special_tokens;
     private Integer top_k;
 
-    public InvokeModelRequest(User user, List<Dialog> dialogs){
+    public InvokeModelRequest(User user, List<DialogDataBody> dialogs){
         model = "internlm2";
         messages = new ArrayList<>();
-        for(Dialog d: dialogs){
+        for(DialogDataBody d: dialogs){
             messages.add(new ModelMessage(d));
         }
         temperature = 0.7;
