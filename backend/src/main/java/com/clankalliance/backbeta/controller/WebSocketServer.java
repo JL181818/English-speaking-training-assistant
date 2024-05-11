@@ -9,6 +9,7 @@ import com.clankalliance.backbeta.repository.UserRepository;
 import com.clankalliance.backbeta.response.CommonResponse;
 import com.clankalliance.backbeta.service.AIService;
 import com.clankalliance.backbeta.utils.RedisUtils;
+import com.clankalliance.backbeta.utils.SnowFlake;
 import com.clankalliance.backbeta.utils.TokenUtil;
 import com.clankalliance.backbeta.utils.Websocket.SocketDomain;
 import io.netty.util.internal.StringUtil;
@@ -34,7 +35,11 @@ import static com.clankalliance.backbeta.service.UserService.AI_USER;
 @ServerEndpoint("/websocket/{token}")
 public class WebSocketServer {
 
+
     private static TokenUtil tokenUtil;
+
+    @Resource
+    public SnowFlake snowFlake;
 
     /**
      * WebSocket为多对象的
@@ -156,11 +161,16 @@ public class WebSocketServer {
 
         //断开连接后，会把数据存到数据库
         List<Dialog> dialogs = RedisUtils.getList(userId,redisTemplateUserRoom,Dialog.class);
+        //关云鹏 5.11: 空的训练不需要存
+        if(dialogs.size() == 0)
+            return;
         //将dialog存入数据库
 
         dialogRepository.saveAll(dialogs);
 
         TrainingData trainingData = new TrainingData();
+        //关云鹏 5.11: 训练数据初始化需指定id
+        trainingData.setId("" + snowFlake.nextId());
         trainingData.setUser(userRepository.findUserById(Long.parseLong(userId)).get());
         Date currentTimeUser = new Date();
         trainingData.setTime(currentTimeUser);
@@ -277,6 +287,7 @@ public class WebSocketServer {
     private void redisStor(String userId,User sender,String content,String correction){
         Date currentTimeUser = new Date();
         Dialog dialogUser = new Dialog();
+        dialogUser.setId("" + snowFlake.nextId());
         dialogUser.setSender(sender);
         dialogUser.setContent(content);
         dialogUser.setTime(currentTimeUser);

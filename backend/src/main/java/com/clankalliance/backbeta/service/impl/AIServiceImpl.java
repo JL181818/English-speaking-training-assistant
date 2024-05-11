@@ -35,7 +35,6 @@ public class AIServiceImpl implements AIService {
 
         // 创建httpclient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        String temp = MODEL_BASE_URL;
         //创建请求对象
         HttpPost httpPost = new HttpPost( MODEL_BASE_URL + "/v1/chat/completions");
 
