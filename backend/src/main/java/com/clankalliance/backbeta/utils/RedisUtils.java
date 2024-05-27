@@ -22,8 +22,13 @@ public class RedisUtils {
      */
     public static  <V> void add(String key, V value, StringRedisTemplate targetMap) {
         try {
-            if(value != null)
-                targetMap.opsForValue().set(key, JSON.toJSONString(value));
+            if(value != null){
+                if(hasKey(key, targetMap)){
+                    delete(key, targetMap);
+                }
+                String temp = JSON.toJSONString(value);
+                targetMap.opsForValue().set(key, temp);
+            }
         } catch (Exception e) {
             throw new RuntimeException("数据缓存至redis失败");
         }

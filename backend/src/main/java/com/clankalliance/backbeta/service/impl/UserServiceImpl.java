@@ -10,6 +10,7 @@ import com.clankalliance.backbeta.utils.StatusManipulateUtilsWithRedis.Manipulat
 import com.clankalliance.backbeta.utils.TokenUtil;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -31,6 +32,14 @@ public class UserServiceImpl implements UserService {
 
     @Resource
     private SnowFlake snowFlake;
+
+
+
+    @PostConstruct
+    public void init(){
+        userRepository.save(AI_USER);
+        userRepository.save(TEST_USER);
+    }
 
     /**
      * 手机登录 发送验证码方法
@@ -67,16 +76,20 @@ public class UserServiceImpl implements UserService {
         CommonResponse response = tokenUtil.phoneCodeCheck(phone,code);
         if(!response.getLoginValid())
             return response;
-        Optional<User> uop = userRepository.findUserById(Long.parseLong(response.getMessage()));
-        if(uop.isEmpty()){
+        try{
+            Optional<User> uop = userRepository.findUserById(Long.parseLong(response.getMessage()));
+            if(uop.isEmpty()){
+                return CommonResponse.errorResponse("内部错误");
+            }else{
+                response.setMessage("登录成功");
+            }
+        }catch (Exception e){
             User newUser = new User(snowFlake.nextId(), "默认用户名", phone, false, new ArrayList<>());
             try{
                 userRepository.save(newUser);
-            }catch (Exception e){
-                return CommonResponse.errorResponse("保存失败", response, e);
+            }catch (Exception r){
+                return CommonResponse.errorResponse("保存失败", response, r);
             }
-        }else{
-            response.setMessage("登录成功");
         }
 
         return response;
