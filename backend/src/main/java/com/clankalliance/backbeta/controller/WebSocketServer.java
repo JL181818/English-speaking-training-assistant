@@ -199,10 +199,12 @@ public class WebSocketServer {
 
         dialogRepository.saveAll(dialogs);
 
+        User user = userRepository.findUserById(userId).get();
+
         TrainingData trainingData = new TrainingData();
         //关云鹏 5.11: 训练数据初始化需指定id
         trainingData.setId("" + snowFlake.nextId());
-        trainingData.setUser(userRepository.findUserById(userId).get());
+        trainingData.setUser(user);
         Date currentTimeUser = new Date();
         trainingData.setTime(currentTimeUser);
         trainingData.setDialogs(dialogs);
@@ -210,6 +212,11 @@ public class WebSocketServer {
         //调用接口，获取score
         //将trainingData存入数据库
         trainingDataRepository.save(trainingData);
+
+        List<TrainingData> trainingDataList = user.getTrainingDataList();
+        trainingDataList.add(trainingData);
+
+        userRepository.save(user);
 
         redisTemplateUserRoom.delete(String.valueOf(userId));
 

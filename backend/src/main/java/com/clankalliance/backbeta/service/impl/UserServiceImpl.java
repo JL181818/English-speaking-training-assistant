@@ -76,23 +76,17 @@ public class UserServiceImpl implements UserService {
         CommonResponse response = tokenUtil.phoneCodeCheck(phone,code);
         if(!response.getLoginValid())
             return response;
-        try{
-            Optional<User> uop = userRepository.findUserById(Long.parseLong(response.getMessage()));
-            if(uop.isEmpty()){
-                return CommonResponse.errorResponse("内部错误");
-            }else{
-                response.setMessage("登录成功");
-            }
-        }catch (Exception e){
+        if(response.getMessage().equals("R")){
             User newUser = new User(snowFlake.nextId(), "默认用户名", phone, false, new ArrayList<>());
             try{
                 userRepository.save(newUser);
+                return CommonResponse.successResponse("注册成功", response);
             }catch (Exception r){
                 return CommonResponse.errorResponse("保存失败", response, r);
             }
+        }else{
+            return CommonResponse.successResponse("登录成功", response);
         }
-
-        return response;
     }
 
     /**

@@ -26,6 +26,7 @@ public class User {
     @Size(max = 50)
     private String nickName;
 
+    @Column(unique = true)
     @JsonSerialize(using= ToStringSerializer.class)
     private long phone;
 
