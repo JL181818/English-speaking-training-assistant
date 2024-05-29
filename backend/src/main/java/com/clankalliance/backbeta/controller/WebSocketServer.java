@@ -28,12 +28,12 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
+import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static com.clankalliance.backbeta.service.UserService.AI_USER;
 
-//xxx.cn/websocket/123456
 @Component
 @ServerEndpoint("/websocket/{token}")
 public class WebSocketServer {
@@ -53,16 +53,6 @@ public class WebSocketServer {
 
     @Resource
     public void setSnowFlake(SnowFlake snowFlake){WebSocketServer.snowFlake = snowFlake;}
-
-//    Redis的一个引入范例
-//    /**
-//     * key: id
-//     * value: roomCode
-//     */
-//    private static StringRedisTemplate RedisTemplateIdRoomCode;
-//
-//    @Resource
-//    public void setRedisTemplateIdRoomCode(StringRedisTemplate redisTemplateIdRoomCode){WebSocketServer.RedisTemplateIdRoomCode = redisTemplateIdRoomCode;}
 
     /**
      * key: userId
@@ -109,14 +99,6 @@ public class WebSocketServer {
     private Long userId = 0L;
 
 
-    private boolean isAckSay = true;
-
-    private boolean isAckCorr = true;
-
-    private long startTimeSay;
-
-    private long startTimeCorr;
-
     //关云鹏 2024.4.28
     //用常量维护超时时间 单位: 毫秒
     public final long ACK_TIMEOUT = 5000;
@@ -162,7 +144,6 @@ public class WebSocketServer {
         socketDomain.setSession(session);
         socketDomain.setUri(session.getRequestURI().toString());
         websocketMap.put(String.valueOf(userId), socketDomain);
-        isAckSay = true;
         logger.info("id为" + userId + "的用户连接，当前人数为" + onlineCount);
         //startTraining(targetId);  //
         //两个序号的初始化
@@ -171,11 +152,7 @@ public class WebSocketServer {
 
         RedisUtils.add(String.valueOf(currentUser.getId()),new ArrayList<>(),redisTemplateUserRoom);
 
-
-        //关云鹏 5.11 新增: AI开场白(固定)
-        String openingMessage = "say#" + aiCurrentPackageId + "#" + "Hello, I'm your oral English speaking training assistant. What can I help you?";
-        sendMessageWithResend(openingMessage);
-        redisStor(AI_USER.getId(), openingMessage);
+        sendMessageWithResend("token#" + aiCurrentPackageId + "#" + response.getToken());
 
         aiCurrentPackageId ++;
     }
@@ -194,6 +171,10 @@ public class WebSocketServer {
         waitingMissions.clear();
 
         //断开连接后，会把数据存到数据库
+
+        if(!RedisUtils.hasKey(String.valueOf(userId), redisTemplateUserRoom)){
+            return;
+        }
 
         List<DialogDataBody> dialogsRaw = RedisUtils.getList(String.valueOf(userId),redisTemplateUserRoom,DialogDataBody.class);
         List<Dialog> dialogs = new ArrayList<>();
@@ -241,19 +222,26 @@ public class WebSocketServer {
             if(request[1].equals("say")){
 
                 //格式ack#say#{AI消息序号} 发过去的回应被收到了
-                isAckSay = true;//接收到了ack才能继续
                 try{
                     Long ackPackageId = Long.parseLong(request[2]);
                     waitingMissions.get(ackPackageId).interrupt();
                     waitingMissions.remove(ackPackageId);
                 }catch (Exception ignored){}
 
+                if(aiCurrentPackageId == 2){
+                    //关云鹏 5.11 新增: AI开场白(固定)
+                    String openingMessage = "say#" + aiCurrentPackageId + "#" + "Hello, I'm your oral English speaking training assistant. What can I help you?";
+                    sendMessageWithResend(openingMessage);
+                    redisStor(AI_USER.getId(), openingMessage);
+                    aiCurrentPackageId ++;
+                }
+
             }else{
                 System.out.println("前端发送错误: " + message);
                 throw new RuntimeException();
             }
 
-        }else if(request[0].equals("say")&&isAckSay&&isAckCorr){
+        }else if(request[0].equals("say")){
             //格式say#{用户消息序号}#{用户回应}#{用户回应更正}#{评分}，用户传来文本,需要调用大模型
             /*关云鹏 2024.4.28 增加一层对用户消息序号的验证
             *
@@ -274,9 +262,6 @@ public class WebSocketServer {
                 String messageToUser;
 
                 //存储大模型纠错作为一个dialog
-
-                isAckCorr = false;
-                startTimeCorr = System.currentTimeMillis();
 
                 //先把用户的文本存一个dialog
                 redisStor(userId,content,correction, score);
@@ -300,7 +285,6 @@ public class WebSocketServer {
                 /*
                  * 修改结束
                  * */
-                isAckSay = false;
             }
 
         }
@@ -339,6 +323,12 @@ public class WebSocketServer {
     public void sendMessage(String obj){
         synchronized (session){
             this.session.getAsyncRemote().sendText(obj);
+        }
+    }
+
+    public void closeConnection() throws IOException {
+        synchronized (session){
+            this.session.close();
         }
     }
 
