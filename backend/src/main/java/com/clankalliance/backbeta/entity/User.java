@@ -34,7 +34,7 @@ public class User {
     private Boolean gender;
 
     //切断循环引用
-    @OneToMany
+    @OneToMany(mappedBy = "user")
     @JsonIgnore
     @JsonIgnoreProperties("user")
     private List<TrainingData> trainingDataList;

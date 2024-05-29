@@ -3,10 +3,12 @@ package com.clankalliance.backbeta.controller;
 import com.clankalliance.backbeta.entity.Dialog;
 import com.clankalliance.backbeta.entity.TrainingData;
 import com.clankalliance.backbeta.entity.User;
+import com.clankalliance.backbeta.entity.relation.TrainingDataDialogs;
 import com.clankalliance.backbeta.redisDataBody.DialogDataBody;
 import com.clankalliance.backbeta.repository.DialogRepository;
 import com.clankalliance.backbeta.repository.TrainingDataRepository;
 import com.clankalliance.backbeta.repository.UserRepository;
+import com.clankalliance.backbeta.repository.relationRepository.TrainingDataDialogsRepository;
 import com.clankalliance.backbeta.response.CommonResponse;
 import com.clankalliance.backbeta.service.AIService;
 import com.clankalliance.backbeta.utils.RedisUtils;
@@ -86,6 +88,11 @@ public class WebSocketServer {
     @Resource
     public void setUserRepository(UserRepository userRepository){WebSocketServer.userRepository = userRepository;}
 
+    private static TrainingDataDialogsRepository trainingDataDialogsRepository;
+
+    @Resource
+    public void setTrainingDataDialogsRepository(TrainingDataDialogsRepository trainingDataDialogsRepository){WebSocketServer.trainingDataDialogsRepository = trainingDataDialogsRepository;}
+
     private static TrainingDataRepository trainingDataRepository;
 
     @Resource
@@ -164,6 +171,7 @@ public class WebSocketServer {
 
         RedisUtils.add(String.valueOf(currentUser.getId()),new ArrayList<>(),redisTemplateUserRoom);
 
+
         //关云鹏 5.11 新增: AI开场白(固定)
         String openingMessage = "say#" + aiCurrentPackageId + "#" + "Hello, I'm your oral English speaking training assistant. What can I help you?";
         sendMessageWithResend(openingMessage);
@@ -213,10 +221,9 @@ public class WebSocketServer {
         //将trainingData存入数据库
         trainingDataRepository.save(trainingData);
 
-        List<TrainingData> trainingDataList = user.getTrainingDataList();
-        trainingDataList.add(trainingData);
-
-        userRepository.save(user);
+        for(Dialog d: dialogs){
+            trainingDataDialogsRepository.save(new TrainingDataDialogs(trainingData.getId(), d.getId()));
+        }
 
         redisTemplateUserRoom.delete(String.valueOf(userId));
 

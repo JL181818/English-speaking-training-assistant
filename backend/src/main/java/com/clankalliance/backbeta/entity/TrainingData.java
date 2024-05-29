@@ -22,11 +22,16 @@ public class TrainingData {
     private Date time;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     private double score;
 
     @OneToMany
+    @JoinTable(name = "training_data_dialogs",
+            joinColumns = {@JoinColumn(name = "training_data_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "dialogs_id", referencedColumnName = "id")}
+    )
     private List<Dialog> dialogs;
 
 }
