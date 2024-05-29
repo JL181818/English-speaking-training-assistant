@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class AckWaitingThread extends Thread{
 
-    private static final Long RESEND_LIMIT = 5L;
+    private static final Long RESEND_LIMIT = 30L;
 
     WebSocketServer webSocketServer;
 
