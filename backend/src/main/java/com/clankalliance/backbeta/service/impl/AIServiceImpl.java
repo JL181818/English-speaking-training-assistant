@@ -31,13 +31,13 @@ public class AIServiceImpl implements AIService {
     public void setModelBaseUrl(String url){MODEL_BASE_URL = url;}
 
     @Override
-    public String invokeModel(User user, List<DialogDataBody> dialogs) {
-        InvokeModelRequest request = new InvokeModelRequest(user, dialogs);
+    public String invokeModel(String chat){
+        InvokeModelRequest request = new InvokeModelRequest(chat);
 
         // 创建httpclient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
         //创建请求对象
-        HttpPost httpPost = new HttpPost( MODEL_BASE_URL + "/v1/chat/completions");
+        HttpPost httpPost = new HttpPost( MODEL_BASE_URL + "/chat");
 
         JSONObject jsonObject = (JSONObject) JSONObject.toJSON(request);
 
@@ -83,10 +83,67 @@ public class AIServiceImpl implements AIService {
         } catch (IOException e) {
             return e.toString();
         }
-        String result = body.substring(body.lastIndexOf("\"content\":") + 11, body.indexOf('\"', body.lastIndexOf("\"content\":") + 11));
+        String result = body.substring(body.lastIndexOf("\"text\":") + 11, body.indexOf('\"', body.lastIndexOf("\"text\":") + 11));
         return result;
-
-
     }
+
+//    @Override
+//    public String invokeModel(User user, List<DialogDataBody> dialogs) {
+//        InvokeModelRequest request = new InvokeModelRequest(user, dialogs);
+//
+//        // 创建httpclient对象
+//        CloseableHttpClient httpClient = HttpClients.createDefault();
+//        //创建请求对象
+//        HttpPost httpPost = new HttpPost( MODEL_BASE_URL + "/chat");
+//
+//        JSONObject jsonObject = (JSONObject) JSONObject.toJSON(request);
+//
+//
+//        StringEntity entity = null;
+//        try {
+//            entity = new StringEntity(jsonObject.toString());
+//        } catch (UnsupportedEncodingException e) {
+//            return e.toString();
+//        }
+//        //指定请求编码方式
+//        entity.setContentEncoding("utf-8");
+//        //数据格式
+//        entity.setContentType("application/json");
+//        httpPost.setEntity(entity);
+//
+//        //发送请求
+//        CloseableHttpResponse response = null;
+//        try {
+//            response = httpClient.execute(httpPost);
+//        } catch (IOException e) {
+//            return e.toString();
+//        }
+//
+//        //解析返回结果
+//        int statusCode = response.getStatusLine().getStatusCode();
+//
+//        HttpEntity entity1 = response.getEntity();
+//
+//        String body = null;
+//        try {
+//            body = EntityUtils.toString(entity1);
+//        } catch (IOException e) {
+//            return e.toString();
+//        }
+//        if(statusCode != 200){
+//            return "出现错误：" + statusCode + " body: " + body;
+//        }
+//        //关闭资源
+//        try {
+//            response.close();
+//            httpClient.close();
+//        } catch (IOException e) {
+//            return e.toString();
+//        }
+//        String result = body.substring(body.lastIndexOf("\"content\":") + 11, body.indexOf('\"', body.lastIndexOf("\"content\":") + 11));
+//        return result;
+//
+//
+//    }
 
 }

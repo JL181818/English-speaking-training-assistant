@@ -273,8 +273,8 @@ public class WebSocketServer {
                  * aiCurrentPackageId代表当前发送的对话的序号，作为标识
                  * 避免重传可能引起的重复问题
                  * */
-                List<DialogDataBody> dialogs = RedisUtils.getList(String.valueOf(userId),redisTemplateUserRoom,DialogDataBody.class);
-                String contentAI = aiService.invokeModel(currentUser, dialogs);
+//                List<DialogDataBody> dialogs = RedisUtils.getList(String.valueOf(userId),redisTemplateUserRoom,DialogDataBody.class);
+                String contentAI = aiService.invokeModel(content);
 
                 redisStor(AI_USER.getId(),contentAI);
 

@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface AIService {
 
-    String invokeModel(User user, List<DialogDataBody> dialogs);
+    String invokeModel(String chat);
+
+//    String invokeModel(User user, List<DialogDataBody> dialogs);
 
 }
