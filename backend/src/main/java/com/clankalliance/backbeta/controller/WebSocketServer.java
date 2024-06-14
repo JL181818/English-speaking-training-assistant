@@ -38,6 +38,7 @@ import static com.clankalliance.backbeta.service.UserService.AI_USER;
 @ServerEndpoint("/websocket/{token}")
 public class WebSocketServer {
 
+    private final String AI_HELLO_MESSAGE = "Hello, I'm your oral English speaking training assistant. What can I help you?";
 
     private static TokenUtil tokenUtil;
     /**
@@ -179,7 +180,11 @@ public class WebSocketServer {
         List<DialogDataBody> dialogsRaw = RedisUtils.getList(String.valueOf(userId),redisTemplateUserRoom,DialogDataBody.class);
         List<Dialog> dialogs = new ArrayList<>();
         for(DialogDataBody d: dialogsRaw){
-            dialogs.add(d.toDialog(currentUser));
+            if(d.getSenderId().equals(AI_USER.getId())){
+                dialogs.add(d.toDialog(AI_USER));
+            }else{
+                dialogs.add(d.toDialog(currentUser));
+            }
         }
         //关云鹏 5.11: 空的训练不需要存
         if(dialogs.size() == 0)
@@ -230,9 +235,9 @@ public class WebSocketServer {
 
                 if(aiCurrentPackageId == 2){
                     //关云鹏 5.11 新增: AI开场白(固定)
-                    String openingMessage = "say#" + aiCurrentPackageId + "#" + "Hello, I'm your oral English speaking training assistant. What can I help you?";
+                    String openingMessage = "say#" + aiCurrentPackageId + "#" + AI_HELLO_MESSAGE;
                     sendMessageWithResend(openingMessage);
-                    redisStor(AI_USER.getId(), openingMessage);
+                    redisStor(AI_USER.getId(), AI_HELLO_MESSAGE);
                     aiCurrentPackageId ++;
                 }
 
@@ -290,7 +295,6 @@ public class WebSocketServer {
         }
         if(!StringUtil.isNullOrEmpty(message)){
             logger.info("收到id为" + userId + "的用户发来消息：" + message);
-
         }
     }
 

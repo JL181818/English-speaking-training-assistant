@@ -83,7 +83,7 @@ public class AIServiceImpl implements AIService {
         } catch (IOException e) {
             return e.toString();
         }
-        String result = body.substring(body.lastIndexOf("\"text\":") + 11, body.indexOf('\"', body.lastIndexOf("\"text\":") + 11));
+        String result = body.substring(body.lastIndexOf("\"text\":") + 8, body.indexOf('\"', body.lastIndexOf("\"text\":") + 8));
         return result;
     }
 
