@@ -6,6 +6,7 @@ import com.clankalliance.backbeta.response.CommonResponse;
 import com.clankalliance.backbeta.service.DictionaryService;
 import com.clankalliance.backbeta.utils.RedisUtils;
 import com.clankalliance.backbeta.utils.TokenUtil;
+import com.clankalliance.backbeta.utils.BloomFilter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -30,6 +31,9 @@ public class DictionaryServiceImpl implements DictionaryService {
     @Resource
     private StringRedisTemplate RedisTemplateWord;
 
+    @Resource
+    private BloomFilter bloomFilter;
+
     private static Long WORD_EXPIRE_TIME;
 
     private final TimeUnit EXPIRE_TIME_TYPE = TimeUnit.MILLISECONDS;
@@ -43,9 +47,19 @@ public class DictionaryServiceImpl implements DictionaryService {
             RedisTemplateWord.expire(key, (long)(WORD_EXPIRE_TIME * (1 + Math.random())), EXPIRE_TIME_TYPE);
             return RedisUtils.getObject(key, RedisTemplateWord, Word.class);
         }else{
-            Optional<Word> wop = wordRepository.findById(word);
-            if(wop.isEmpty())
+            if (!bloomFilter.existsInMySQL(word)) {
+                // 布隆过滤器中显示数据库不存在该单词，直接返回 null
+                System.out.println("我没有在布隆过滤器里找到");
                 return null;
+            }
+
+            // 布隆过滤器中可能包含该单词，继续从数据库中查找
+            Optional<Word> wop = wordRepository.findById(word);
+            if (wop.isEmpty()) {
+                // 数据库中不存在该单词，直接返回 null
+
+                return null;
+            }
             Word wordEntity = wop.get();
             RedisUtils.add(key, wordEntity, RedisTemplateWord);
             RedisTemplateWord.expire(key, (long)(WORD_EXPIRE_TIME * (1 + Math.random())), EXPIRE_TIME_TYPE);
