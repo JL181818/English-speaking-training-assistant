@@ -40,6 +40,7 @@ public class BloomFilter {
             boolean bloomFilterExists = RedisUtils.hasKey("myBloomFilter",stringRedisTemplate);
 
             if (!bloomFilterExists) {
+                System.out.println("redis中存在布隆过滤器");
                 this.numBits = optimalNumOfBits(prop.getExpectedInsertions(), prop.getFpp());
                 this.numHashFunctions = optimalNumOfHashFunctions(prop.getExpectedInsertions(), numBits);
 
