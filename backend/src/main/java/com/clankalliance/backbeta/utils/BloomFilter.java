@@ -36,15 +36,23 @@ public class BloomFilter {
     //布隆过滤器只初始化一次
     @PostConstruct
     public void initBloomFilter() {
-        this.numBits = optimalNumOfBits(prop.getExpectedInsertions(), prop.getFpp()) ;
-        this.numHashFunctions = optimalNumOfHashFunctions(prop.getExpectedInsertions(), numBits);
-        // 假设从数据库中获取所有单词数据并存入布隆过滤器
-        List<String> allDataFromMySQL = getAllDataFromMySQL();
-        System.out.println("开始初始化数据");
-        for (String data : allDataFromMySQL) {
-            putToBloomFilter(data);
-        }
-        System.out.println("初始化结束");
+            // 检查 Redis 中布隆过滤器是否已存在
+            boolean bloomFilterExists = RedisUtils.hasKey("myBloomFilter",stringRedisTemplate);
+
+            if (!bloomFilterExists) {
+                this.numBits = optimalNumOfBits(prop.getExpectedInsertions(), prop.getFpp());
+                this.numHashFunctions = optimalNumOfHashFunctions(prop.getExpectedInsertions(), numBits);
+
+                // 假设从数据库中获取所有单词数据并存入布隆过滤器
+                List<String> allDataFromMySQL = getAllDataFromMySQL();
+                System.out.println("开始初始化数据");
+                for (String data : allDataFromMySQL) {
+                    putToBloomFilter(data);
+                }
+                System.out.println("初始化结束");
+            } else {
+                System.out.println("布隆过滤器已存在，无需初始化");
+            }
     }
 
     // 将数据存入布隆过滤器
