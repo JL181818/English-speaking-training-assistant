@@ -58,11 +58,17 @@ public class RedisUtils {
      */
     public static <V> List<V> getList(String key, StringRedisTemplate targetMap, Class<V> clazz) {
         String value = get(key, targetMap);
-        List<V> result = Collections.emptyList();
-        if (value != null && !value.equals("")) {
-            result = JSONArray.parseArray(value, clazz);
+        try{
+            List<V> result = Collections.emptyList();
+            if (value != null && !value.equals("")) {
+                result = JSONArray.parseArray(value, clazz);
+            }
+            return result;
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            System.out.println(value);
+            return null;
         }
-        return result;
     }
     /**
      * 功能描述：Get the value of {@code key}.

@@ -178,20 +178,23 @@ public class WebSocketServer {
         }
 
         List<DialogDataBody> dialogsRaw = RedisUtils.getList(String.valueOf(userId),redisTemplateUserRoom,DialogDataBody.class);
+        RedisUtils.delete(String.valueOf(userId), redisTemplateUserRoom);
         List<Dialog> dialogs = new ArrayList<>();
-        for(DialogDataBody d: dialogsRaw){
-            if(d.getSenderId().equals(AI_USER.getId())){
-                dialogs.add(d.toDialog(AI_USER));
-            }else{
-                dialogs.add(d.toDialog(currentUser));
+        if(dialogsRaw != null){
+            for(DialogDataBody d: dialogsRaw){
+                if(d.getSenderId().equals(AI_USER.getId())){
+                    dialogs.add(d.toDialog(AI_USER));
+                }else{
+                    dialogs.add(d.toDialog(currentUser));
+                }
             }
-        }
-        //关云鹏 5.11: 空的训练不需要存
-        if(dialogs.size() == 0)
-            return;
-        //将dialog存入数据库
+            //关云鹏 5.11: 空的训练不需要存
+            if(dialogs.size() == 0)
+                return;
+            //将dialog存入数据库
 
-        dialogRepository.saveAll(dialogs);
+            dialogRepository.saveAll(dialogs);
+        }
 
         User user = userRepository.findUserById(userId).get();
 

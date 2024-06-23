@@ -80,6 +80,7 @@ public class UserServiceImpl implements UserService {
             User newUser = new User(snowFlake.nextId(), "默认用户名", phone, false, new ArrayList<>());
             try{
                 userRepository.save(newUser);
+                response.setToken(ManipulateUtil.updateStatus("" + newUser.getId()));
                 return CommonResponse.successResponse("注册成功", response);
             }catch (Exception r){
                 return CommonResponse.errorResponse("保存失败", response, r);
