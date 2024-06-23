@@ -200,7 +200,11 @@ public class WebSocketServer {
 
         TrainingData trainingData = new TrainingData();
         //关云鹏 5.11: 训练数据初始化需指定id
-        trainingData.setId("" + snowFlake.nextId());
+
+        //6.24 id拼接
+        String trainingDataId = userId+""+snowFlake.nextId();;
+
+        trainingData.setId(trainingDataId);
         trainingData.setUser(user);
         Date currentTimeUser = new Date();
         trainingData.setTime(currentTimeUser);
@@ -312,7 +316,10 @@ public class WebSocketServer {
         List<DialogDataBody> list = RedisUtils.getList(key, redisTemplateUserRoom, DialogDataBody.class);
         Date currentTimeUser = new Date();
         DialogDataBody dialogUser = new DialogDataBody();
-        dialogUser.setId("" + snowFlake.nextId());
+        //6.24 dialog拼接id
+        String dialogId = userId +""+ snowFlake.nextId();
+        dialogUser.setId(dialogId);
+        //dialogUser.setId("" + snowFlake.nextId());
         dialogUser.setSenderId(userId);
         dialogUser.setContent(content);
         dialogUser.setTime(currentTimeUser);
