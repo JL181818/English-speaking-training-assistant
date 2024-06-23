@@ -49,7 +49,7 @@ public class DictionaryServiceImpl implements DictionaryService {
         }else{
             if (!bloomFilter.existsInMySQL(word)) {
                 // 布隆过滤器中显示数据库不存在该单词，直接返回 null
-                System.out.println("我没有在布隆过滤器里找到");
+//                System.out.println("我没有在布隆过滤器里找到");
                 return null;
             }
 

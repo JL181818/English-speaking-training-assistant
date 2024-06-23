@@ -38,7 +38,7 @@ import static com.clankalliance.backbeta.service.UserService.AI_USER;
 @ServerEndpoint("/websocket/{token}")
 public class WebSocketServer {
 
-    private final String AI_HELLO_MESSAGE = "Hello, I'm your oral English speaking training assistant. What can I help you?";
+    private final String AI_HELLO_MESSAGE = "Hello, I'm SpeakSpark, your oral English speaking training assistant. What can I help you?";
 
     private static TokenUtil tokenUtil;
     /**
