@@ -105,6 +105,7 @@ public class UserServiceImpl implements UserService {
             return CommonResponse.errorResponse("用户不存在", response);
         }
         User user = uop.get();
+        user.setTrainingDataList(null);
         response.setContent(user);
         response.setSuccess(true);
         response.setMessage("查找成功");
