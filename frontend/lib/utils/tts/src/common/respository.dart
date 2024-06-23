@@ -1,0 +1,76 @@
+import 'dart:async';
+
+import '../audio/audio.dart';
+import '../audio/audio_handler.dart';
+import '../auth/auth.dart';
+import '../auth/auth_handler.dart';
+import '../auth/auth_token.dart';
+import '../common/azure_exception.dart';
+import '../common/config.dart';
+import '../tts/tts_params.dart';
+import '../voices/voices.dart';
+import '../voices/voices_handler.dart';
+
+///Implements repository pattern to acces Azure resources
+class Repository {
+  Repository(
+      {required this.authHandler,
+      required this.voicesHandler,
+      required this.audioHandler});
+
+  final AuthHandler authHandler;
+  final VoicesHandler voicesHandler;
+  final AudioHandler audioHandler;
+
+  ///Get available voices on the Azure endpoint region
+  ///
+  ///Returns [VoicesResponse]
+  ///
+  /// [VoicesSuccess] request succeeded
+  ///
+  /// On failure returns one of the following:
+  /// [VoicesFailedBadRequest], [VoicesFailedBadRequest], [VoicesFailedUnauthorized],
+  /// [VoicesFailedTooManyRequests], [VoicesFailedBadGateWay], [VoicesFailedUnkownError]
+  Future<VoicesSuccess> getAvailableVoices() async {
+    await assureTokenIsValid();
+    return await voicesHandler.getVoices();
+  }
+
+  ///Get audio for transcription
+  ///
+  /// [ttsParams] request parameters
+  ///
+  /// Returns [AudioSuccess]
+  ///
+  /// [AudioSuccess] request succeeded
+  ///
+  /// On failure returns one of the following:
+  /// [AudioFailedBadRequest], [AudioFailedUnauthorized], [AudioFailedUnsupported], [AudioFailedTooManyRequest],
+  /// [AudioFailedBadGateway], [AudioFailedBadGateway], [AudioFailedUnkownError] or [AzureException]
+  Future<AudioSuccess> getTts(TtsParams ttsParams) async {
+    await assureTokenIsValid();
+    return await audioHandler.getAudio(ttsParams);
+  }
+
+  ///Checks if there is a valid token.
+  ///Requests a new token if no valid token is found.
+  ///
+  /// Returns *true* if a valid token exists.
+  ///
+  ///Throws [AzureException] if token request fails.
+  Future<bool> assureTokenIsValid() async {
+    final completer = Completer<bool>();
+    if (Config.authToken == null || Config.authToken!.isExpired) {
+      final authResponse = await authHandler.getAuthToken();
+      if (authResponse is TokenSuccess) {
+        Config.authToken = AuthToken(token: authResponse.token);
+        completer.complete(true);
+      } else {
+        throw AzureException(response: authResponse);
+      }
+    } else {
+      completer.complete(true);
+    }
+    return completer.future;
+  }
+}
