@@ -19,7 +19,7 @@
 - [Panyu]() - 前端
 - [Jielirong](https://github.com/JL181818) - 模型
 - [Guan Yunpeng](https://github.com/SKgtsa) - 后端
-- [stroll](https://github.com/Idonotkownwho) - 后端
+- [Peng Shuaihao](https://github.com/Idonotkownwho) - 后端
 
 ## 模型环境配置和模型文件下载：
 ```bash
