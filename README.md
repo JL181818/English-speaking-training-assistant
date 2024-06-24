@@ -11,6 +11,12 @@
 
 **进度跟踪**：随着时间的推移监控你的进度，以保持动力并跟踪你的进步，数据库持久化存储
 
+## Authors
+
+- [Author One](https://example.com/author1) - Role/Contribution
+- [Author Two](https://example.com/author2) - Role/Contribution
+- [Author Three](https://example.com/author3) - Role/Contribution
+
 ## 模型环境配置和模型文件下载：
 ```bash
 conda create -n speakspark python=3.10
