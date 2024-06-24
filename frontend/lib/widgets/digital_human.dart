@@ -9,8 +9,7 @@ import 'package:dio/dio.dart' as dio;
 
 class DigitalHuman extends StatefulWidget{
   final String text;
-  final String? role;
-  const DigitalHuman({super.key, required this.text, this.role});
+  const DigitalHuman({super.key, required this.text});
   @override
   State<StatefulWidget> createState() {
     return DigitalHumanState();
@@ -19,6 +18,8 @@ class DigitalHuman extends StatefulWidget{
 }
 class DigitalHumanState extends State<DigitalHuman>{
   VideoPlayerController? _controller;
+  String _role = 'boy';
+  int _mode = 0;
 
   @override
   void initState() {
@@ -27,7 +28,7 @@ class DigitalHumanState extends State<DigitalHuman>{
   }
   String _getUrl(){
     var text = widget.text;
-    return '${UrlRouter.text2Video}?sentence=$text&role=${widget.role ?? 'boy'}';
+    return '${UrlRouter.text2Video}?sentence=$text&role=$_role&enhancer=$_mode';
   }
   _download() async {
     dio.Dio d = dio.Dio();
@@ -39,7 +40,8 @@ class DigitalHumanState extends State<DigitalHuman>{
     Directory tempDir = await getTemporaryDirectory();
     String tempPath = tempDir.path;
     var path = '$tempPath/${DateTime.now().second}.mp4';
-    var res = await d.download(_getUrl(), path);
+    var url = _getUrl();
+    var res = await d.download(url, path);
     _controller = VideoPlayerController.file(File(path))
       ..initialize().then((_) {
         setState(() {});
@@ -82,6 +84,49 @@ class DigitalHumanState extends State<DigitalHuman>{
                     _controller?.pause();
                   },
                   icon: const Icon(Icons.pause, color: Colors.white,)
+              )
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Center(
+                child: _role=='boy' ?
+                ElevatedButton(
+                    onPressed: (){
+                      _role = 'girl';
+                      _download();
+                    },
+                    child: const Text('女生')
+                ) :
+                ElevatedButton(
+                    onPressed: (){
+                      _role = 'boy';
+                      _download();
+                    },
+                    child: const Text('男生')
+                ),
+              )
+            ),
+            Expanded(
+              child: Center(
+                child: _mode==0 ?
+                ElevatedButton(
+                    onPressed: (){
+                      _mode = 1;
+                      _download();
+                    },
+                    child: const Text('高清')
+                ) :
+                ElevatedButton(
+                    onPressed: (){
+                      _mode = 0;
+                      _download();
+                    },
+                    child: const Text('省流')
+                ),
               )
             )
           ],

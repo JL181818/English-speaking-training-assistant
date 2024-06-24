@@ -20,7 +20,7 @@ import '../utils/voice2text/platform/audio_recorder_io.dart';
 class FastSTT extends StatefulWidget{
   final WebSocket? socket;
   final Function(String) show;
-  final Function(String ,double) addition;
+  final Function(String ,double, List) addition;
   final Function(bool) setSpeakingState;
   final Function(String) setRealTimeText;
   const FastSTT({
@@ -196,8 +196,9 @@ class SSTState extends State<FastSTT> with AudioRecorderMixin {
         var data = await getPointsCorrection(request);
         var cor = data.correction;
         var points = data.score;
+        var words = data.wrongWords;
         _toServer(_text, cor, points);
-        widget.addition(cor, points);
+        widget.addition(cor, points, words);
       }
     }
   }

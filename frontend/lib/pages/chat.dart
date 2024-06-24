@@ -147,14 +147,24 @@ class _ChatPageState extends State<ChatPage> {
     );
   }
 
-  List<TextSpan> textSpanBuilder(String text){
+  List<TextSpan> textSpanBuilder(types.CustomMessage cm){
     List<TextSpan> res = [];
+    String text = cm.metadata?['text'];
     List<String> words = text.split(' ');
+    List? wrongWords = cm.metadata?['wrongWords'];
+    Set<String> wwords = {};
+    if(wrongWords!=null){
+      for(var wrongWord in wrongWords){
+        wwords.add(wrongWord['word']);
+      }
+    }
+
     for(var word in words){
       res.add(
           TextSpan(
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 15,
+                color: wwords.contains(word) ? Colors.red : Colors.black
               ),
               text: '$word ',
               recognizer: TapGestureRecognizer()..onTap = () async {
@@ -225,7 +235,7 @@ class _ChatPageState extends State<ChatPage> {
           margin: EdgeInsets.only(left: 20, right: 20),
           child: Text.rich(
             TextSpan(
-                children: textSpanBuilder(text)
+                children: textSpanBuilder(cm)
             ),
           ),
         ),
@@ -382,9 +392,11 @@ class _ChatPageState extends State<ChatPage> {
     _addMessage(textMessage);
   }
 
-  void _addCorrectionScore(String corr, double score){
+  void _addCorrectionScore(String corr, double score, List wrongWords){
     _messages[0].metadata?['correction'] = corr;
     _messages[0].metadata?['score'] = score;
+    _messages[0].metadata?['wrongWords'] = wrongWords;
+    setState(() { });
   }
 
   // void _loadMessagesFromJson() async {
@@ -433,7 +445,8 @@ class _ChatPageState extends State<ChatPage> {
       leading: IconButton(
         onPressed: () {
           widget.dialog ?? socket.close();
-          Get.back(result: true);
+          // Get.back(result: true);
+          Get.offAll(ListViewPage());
         },
         icon: const Icon(Icons.arrow_back_ios),
 
@@ -470,7 +483,7 @@ class _ChatPageState extends State<ChatPage> {
               borderRadius: BorderRadius.all(Radius.circular(18.0)),
             ),
             width: 200,
-            height: 220,
+            height: 300,
             child: DigitalHuman(text: videoText,),
             // color: Colors.red,
           )
@@ -510,19 +523,33 @@ class ExpansionState extends State<Expansion>{
   bool isOpen = false;
   String _getCorrection(){
     String text = widget.cm.metadata?['text'];
+    text = text.replaceAll(',', '').replaceAll('.', '').replaceAll(';', '')
+        .replaceAll(':', '').replaceAll('"', '').replaceAll("'", '');
+    text = text.toLowerCase();
     String? corr = widget.cm.metadata?['correction'];
-    if(corr == null || text.toLowerCase() == corr.toLowerCase()){
+    if(corr == null || text.compareTo(corr.toLowerCase())==0){
       return '无';
     }else{
       return corr;
     }
   }
+  Widget _getWrongWords(){
+    List<Widget> children = [];
+    var words = widget.cm.metadata?['wrongWords'];
+    if(words!=null){
+      for(var word in words){
+        children.add(Text('${word['word']}: ${word['score']}'));
+      }
+    }
+    return Column(children: children,);
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Color(0xBFB170FF),
       width: 320,
       // color: Colors.red,
-      margin: EdgeInsets.only(left: 20, right: 20),
+      // margin: EdgeInsets.only(left: 20, right: 20),
       child: isOpen ?
       Column(
 
@@ -530,6 +557,7 @@ class ExpansionState extends State<Expansion>{
         children: [
           Text('得分：${widget.cm.metadata?['score'] ?? '暂无'}'),
           Text('纠正：${_getCorrection()}'),
+          _getWrongWords(),
           SizedBox(
             height: 30,
             child: IconButton(

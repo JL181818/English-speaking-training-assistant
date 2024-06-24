@@ -102,7 +102,7 @@ public class WebSocketServer {
 
     //关云鹏 2024.4.28
     //用常量维护超时时间 单位: 毫秒
-    public final long ACK_TIMEOUT = 5000;
+    public final long ACK_TIMEOUT = 10000;
 
     //期望收到客户端的对话编号 小于该值代表为客户端过去重传的重复包，回复ack并不予处理
     private long sayPackageIdExcepted;
@@ -267,10 +267,11 @@ public class WebSocketServer {
                 score = Double.parseDouble(request[4]);
             }catch (Exception ignored){};
             String ackMessage = "ack#say#" + request[1];
-            sendMessageTo(String.valueOf(userId),ackMessage);
+
             if(Long.parseLong(request[1]) >= sayPackageIdExcepted){
                 //TODO: 考虑序号小的包比序号大的包来的晚(但这种情况似乎不太可能)
                 sayPackageIdExcepted ++;
+                sendMessageTo(String.valueOf(userId),ackMessage);
                 String messageToUser;
 
                 //存储大模型纠错作为一个dialog
@@ -297,6 +298,8 @@ public class WebSocketServer {
                 /*
                  * 修改结束
                  * */
+            }else{
+                sendMessageTo(String.valueOf(userId),ackMessage);
             }
 
         }

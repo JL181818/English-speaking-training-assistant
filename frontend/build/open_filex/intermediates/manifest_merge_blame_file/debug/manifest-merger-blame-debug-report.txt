@@ -1,0 +1,51 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.crazecoder.openfile" >
+5
+6    <uses-sdk
+7        android:minSdkVersion="16"
+7-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml
+8        android:targetSdkVersion="16" />
+8-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml
+9
+10    <uses-permission
+10-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:5:5-7:38
+11        android:name="android.permission.READ_EXTERNAL_STORAGE"
+11-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:6:9-64
+12        android:maxSdkVersion="32" />
+12-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:7:9-35
+13    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+13-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:9:5-76
+13-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:9:22-73
+14    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+14-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:10:5-75
+14-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:10:22-72
+15    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+15-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:11:5-75
+15-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:11:22-72
+16
+17    <application>
+17-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:13:5-25:19
+18        <provider
+18-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:14:9-24:20
+19            android:name="com.crazecoder.openfile.FileProvider"
+19-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:15:13-64
+20            android:authorities="${applicationId}.fileProvider.com.crazecoder.openfile"
+20-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:16:13-88
+21            android:exported="false"
+21-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:17:13-37
+22            android:grantUriPermissions="true"
+22-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:18:13-47
+23            tools:replace="android:authorities" >
+23-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:19:13-48
+24            <meta-data
+24-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:20:13-23:20
+25                android:name="android.support.FILE_PROVIDER_PATHS"
+25-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:21:17-67
+26                android:resource="@xml/filepaths" />
+26-->C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\open_filex-4.4.0\android\src\main\AndroidManifest.xml:22:17-50
+27        </provider>
+28    </application>
+29
+30</manifest>

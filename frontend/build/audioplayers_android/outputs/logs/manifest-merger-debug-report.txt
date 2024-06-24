@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml:1:1-44
+INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml:1:1-44
+INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml:1:1-44
+	package
+		ADDED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml:1:11-42
+		INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml:1:1-44
+uses-sdk
+INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+		ADDED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+		ADDED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\11730\AppData\Local\Pub\Cache\hosted\pub.flutter-io.cn\audioplayers_android-4.0.3\android\src\main\AndroidManifest.xml

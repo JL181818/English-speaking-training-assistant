@@ -1,0 +1,936 @@
+{
+   "checksum": "1945eea3237ab533ebf9893bb6664cad",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13275498943344667",
+               "date_last_used": "0",
+               "guid": "fee95b15-1a13-4053-a232-1b0166939791",
+               "id": "15",
+               "name": "山东大学本科生院",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.bkjx.sdu.edu.cn/"
+            }, {
+               "date_added": "13301229010667605",
+               "date_last_used": "0",
+               "guid": "687dabce-a370-492a-8fc0-c3f5f7a7f69d",
+               "id": "16",
+               "name": "山东大学服务大厅",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://scenter.sdu.edu.cn/tp_fp/view?m=fp#act=fp/formHome&pn=4"
+            }, {
+               "date_added": "13308059370965166",
+               "date_last_used": "0",
+               "guid": "4ec9366a-b46e-4fa4-8e4a-d295ecd8b5ab",
+               "id": "17",
+               "name": "智慧树网",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.zhihuishu.com/"
+            }, {
+               "date_added": "13308151715116168",
+               "date_last_used": "0",
+               "guid": "a6d35914-857c-42b2-8f9d-7768110268b9",
+               "id": "18",
+               "name": "中国大学MOOC(慕课)_国家精品课程在线学习平台",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.icourse163.org/"
+            }, {
+               "date_added": "13353909691011438",
+               "date_last_used": "0",
+               "guid": "0bf32df6-292e-425c-81c0-423fb610a033",
+               "id": "19",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "山东大学学生就业创业指导中心",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.job.sdu.edu.cn/"
+            } ],
+            "date_added": "13276847425187350",
+            "date_last_used": "0",
+            "date_modified": "13353909691011438",
+            "guid": "dfd0c800-c800-4d7f-83fa-5897962cf736",
+            "id": "14",
+            "name": "山大",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13278260690532647",
+               "date_last_used": "0",
+               "guid": "b664c3ee-74a8-46c4-a0ea-012a6e0ea434",
+               "id": "21",
+               "name": "首页 - 廖雪峰的官方网站",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.liaoxuefeng.com/"
+            }, {
+               "date_added": "13277702723371514",
+               "date_last_used": "0",
+               "guid": "e1fcc7d2-b134-431d-9862-fcd733642b5d",
+               "id": "22",
+               "name": "菜鸟教程 - 学的不仅是技术，更是梦想！",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.runoob.com/"
+            }, {
+               "date_added": "13291720843122927",
+               "date_last_used": "0",
+               "guid": "256bbad0-7ef6-4ff0-bf49-4539ad3607a5",
+               "id": "23",
+               "name": "英语四、六级考试报名网",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://cet-bm.neea.edu.cn/"
+            }, {
+               "date_added": "13297319568251431",
+               "date_last_used": "0",
+               "guid": "98c35241-7dbe-4b0c-a963-f629bf3dd538",
+               "id": "24",
+               "name": "GeoGebra - 风靡世界, 过亿师生沉迷使用的免费数学软件",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.geogebra.org/?lang=zh-CN"
+            }, {
+               "date_added": "13319466810199583",
+               "date_last_used": "0",
+               "guid": "a0aadd47-ebb9-4d72-99c3-e516d72a5f90",
+               "id": "25",
+               "name": "Release V1.0.0 · troublemkerrr/VisualTree · GitHub",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://github.com/troublemkerrr/VisualTree/releases/tag/V1.0.0"
+            }, {
+               "date_added": "13319560006299206",
+               "date_last_used": "0",
+               "guid": "fe67f477-bfdb-4bc3-9f67-1079664e452b",
+               "id": "26",
+               "name": "Qt5.14.2下载与安装（保姆级图文教程）_孙 悟 空的博客-CSDN博客_qt5.14",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/weixin_46098577/article/details/122092822"
+            }, {
+               "date_added": "13356578020308451",
+               "date_last_used": "0",
+               "guid": "e0346a5d-090e-4f82-b35e-60e66c880d1e",
+               "id": "27",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "题库 - 力扣 (LeetCode) 全球极客挚爱的技术成长平台",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://leetcode.cn/problemset/"
+            } ],
+            "date_added": "13278260705138540",
+            "date_last_used": "0",
+            "date_modified": "13356578020308451",
+            "guid": "7d3e3dbd-dce8-41d7-b5ee-e3bc3b76c8bc",
+            "id": "20",
+            "name": "学习",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13341639351971128",
+               "date_last_used": "0",
+               "guid": "66fc2939-8440-449c-add0-651c06a10a29",
+               "id": "29",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Shadow(PCF算法思路)------计算机图形学高质量实时渲染(二)-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/weixin_44683202/article/details/128840807"
+            }, {
+               "date_added": "13343989705689229",
+               "date_last_used": "0",
+               "guid": "2108a1a7-0108-4f30-9eb8-9cd276fc2c5b",
+               "id": "30",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "GAMES202作业1-实现过程详细步骤-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/qq_41835314/article/details/125726339"
+            }, {
+               "date_added": "13343989787103403",
+               "date_last_used": "0",
+               "guid": "cfa0970b-db36-42fb-8792-59670177981c",
+               "id": "31",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "GAMES202-作业1：实时阴影 - 知乎",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://zhuanlan.zhihu.com/p/595039591"
+            }, {
+               "date_added": "13346064171322607",
+               "date_last_used": "0",
+               "guid": "5a14295a-e6a1-494d-90d5-3837c8fb9ccb",
+               "id": "32",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "GAMES202-作业2： Precomputed Radiance Transfer（球谐函数） - 知乎",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://zhuanlan.zhihu.com/p/596050050"
+            }, {
+               "date_added": "13346124029133860",
+               "date_last_used": "0",
+               "guid": "bb712d1a-265c-450b-b0e8-496ef950c53c",
+               "id": "33",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "基于物理着色：BRDF - 知乎",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://zhuanlan.zhihu.com/p/21376124"
+            }, {
+               "date_added": "13346135850843083",
+               "date_last_used": "0",
+               "guid": "276c49db-5436-47b9-bdd2-4820147cbff6",
+               "id": "34",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "人人都能懂的球谐函数旋转 - 知乎",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://zhuanlan.zhihu.com/p/518349283"
+            } ],
+            "date_added": "13341639337944415",
+            "date_last_used": "0",
+            "date_modified": "13346135850843083",
+            "guid": "4151a19d-aa0a-4006-8e15-e173259f9313",
+            "id": "28",
+            "name": "Games202学习",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13355806700361672",
+               "date_last_used": "0",
+               "guid": "0dc46172-463c-4b49-b1ab-c0d60dff3bbd",
+               "id": "36",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "前言 — 动手学深度学习 2.0.0 documentation",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://zh.d2l.ai/chapter_preface/index.html"
+            }, {
+               "date_added": "13355292668684872",
+               "date_last_used": "0",
+               "guid": "d2a3b558-af18-40ab-8098-c2716ac6256c",
+               "id": "37",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Python open() 函数 | 菜鸟教程",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.runoob.com/python/python-func-open.html"
+            }, {
+               "date_added": "13355295613327629",
+               "date_last_used": "0",
+               "guid": "39287503-6ae3-49b0-8776-171f0e4b608a",
+               "id": "38",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "python中with...as的用法_with as python-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/qiqicos/article/details/79200089"
+            }, {
+               "date_added": "13355722026387696",
+               "date_last_used": "0",
+               "guid": "ff25f92b-83d5-4c92-9b47-b6787ceb2d2b",
+               "id": "39",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "python的pickle模块dump()和load()函数使用介绍（附代码）_python dump函数-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/ITBigGod/article/details/86477083"
+            }, {
+               "date_added": "13355722100998488",
+               "date_last_used": "0",
+               "guid": "35134739-1900-43d4-b620-a23bbb0b32ea",
+               "id": "40",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Python中r' ', b' ', u' ', f' '的含义及用法详解 - 知乎",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://zhuanlan.zhihu.com/p/678476286"
+            }, {
+               "date_added": "13355722614492765",
+               "date_last_used": "0",
+               "guid": "04372863-d985-453f-b8a0-010254c56391",
+               "id": "41",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "【一文读懂】python 中的 numpy.reshape(a, newshape, order=‘C‘) 详细说明及实例讲解_python numpy.reshape-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/qq_27677599/article/details/116597966"
+            }, {
+               "date_added": "13357787731067060",
+               "date_last_used": "0",
+               "guid": "78948338-e83a-4e3f-99e7-de739c53eec0",
+               "id": "42",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "python中getopt函数详解_python getopt-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/gufenchen/article/details/102921857"
+            }, {
+               "date_added": "13357790107288195",
+               "date_last_used": "0",
+               "guid": "67cded76-7c3f-4828-826b-478bd6f25555",
+               "id": "43",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "PyTorch之torchvision.transforms详解[原理+代码实现]-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/qq_37555071/article/details/107532319"
+            }, {
+               "date_added": "13357791013722415",
+               "date_last_used": "0",
+               "guid": "c12cab50-6e27-4dc9-8154-3e0251242322",
+               "id": "44",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Python enumerate() 函数 | 菜鸟教程",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.runoob.com/python/python-func-enumerate.html"
+            }, {
+               "date_added": "13357835974910142",
+               "date_last_used": "0",
+               "guid": "544616df-d2f1-443c-a29d-1780938e5112",
+               "id": "45",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "ResNet-18超详细介绍！！！！_resnet18-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/m0_64799972/article/details/132753608"
+            }, {
+               "date_added": "13357835996882964",
+               "date_last_used": "0",
+               "guid": "4202558f-afab-4b62-bebc-83b77852959c",
+               "id": "46",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "7.6. 残差网络（ResNet） — 动手学深度学习 2.0.0 documentation",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://zh-v2.d2l.ai/chapter_convolutional-modern/resnet.html#id1"
+            }, {
+               "date_added": "13357932610353844",
+               "date_last_used": "0",
+               "guid": "08d62468-1ab9-4dc0-a38f-e0dc0c508526",
+               "id": "47",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "PyTorch 显存爆炸｜RuntimeError: CUDA out of memory. 如何排查问题？_pytorch爆显存-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/weixin_44935658/article/details/133704723"
+            }, {
+               "date_added": "13361804575802132",
+               "date_last_used": "0",
+               "guid": "2cafea2c-72df-41fe-9fc7-7634d9cb0e94",
+               "id": "48",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "【机器学习】深度神经网络（DNN）：原理、应用与代码实践_dnn 代码-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/richard_yuu/article/details/138151686"
+            }, {
+               "date_added": "13361804588169755",
+               "date_last_used": "0",
+               "guid": "5c4a45dd-7439-4e84-afb1-76b325300e6d",
+               "id": "49",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Pytorch nn.Linear()的基本用法与原理详解及全连接层简介-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/qq_44722189/article/details/135035351"
+            }, {
+               "date_added": "13361804590686847",
+               "date_last_used": "0",
+               "guid": "c2f711ef-8b45-4c95-a998-1ddd8542bd8b",
+               "id": "50",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "PyTorch学习笔记：nn.ReLU——ReLU激活函数-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/qq_50001789/article/details/128973918"
+            }, {
+               "date_added": "13361804594070772",
+               "date_last_used": "0",
+               "guid": "18e4c455-de35-4f80-8120-e0befd565fdd",
+               "id": "51",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "python pytorch中 .view()函数讲解-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/Dust_Evc/article/details/121785089"
+            }, {
+               "date_added": "13361804596526285",
+               "date_last_used": "0",
+               "guid": "686f2e34-1947-4373-9103-74920cfa1fd4",
+               "id": "52",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "关于pytorch中张量（Tensor）a.shape的全面解读_pytorch读张量的shape-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/yuanhaopeng123/article/details/109897822"
+            }, {
+               "date_added": "13361862544906979",
+               "date_last_used": "0",
+               "guid": "9b5fafe3-855d-4486-89b1-3ff74a00a44d",
+               "id": "53",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "CAM(类激活映射)，卷积可视化，神经网络可视化，一个库搞定，真的简单的不能再简单_eigencam-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/u014264373/article/details/116302678"
+            }, {
+               "date_added": "13361862547498216",
+               "date_last_used": "0",
+               "guid": "d85a8ddc-b705-4e6c-8701-b57aff8ccaa4",
+               "id": "54",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "全网都在讲迁移学习，可你会写代码了吗？收藏我这个，10分钟开始你的迁移学习训练_加载预训练模型修改分类数量-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/u014264373/article/details/116172498"
+            } ],
+            "date_added": "13355292661209682",
+            "date_last_used": "0",
+            "date_modified": "13361862547498216",
+            "guid": "7dc7e342-56ad-4c44-989a-966a78922242",
+            "id": "35",
+            "name": "深度学习",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13358431699064959",
+               "date_last_used": "0",
+               "guid": "f5673e5e-e8f1-44f0-8971-c70e4f3156ca",
+               "id": "56",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "面向各年龄段的英语口语训练助手 - boardmix",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://boardmix.cn/app/editor/Nxo5kvM9HXFUdP1YLyJqRw"
+            }, {
+               "date_added": "13358437912310021",
+               "date_last_used": "13363099339320965",
+               "guid": "3f7af7e4-9d93-4a63-a0ac-70fa7708a498",
+               "id": "57",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Postman API Platform",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://web.postman.co/"
+            }, {
+               "date_added": "13363522625439986",
+               "date_last_used": "0",
+               "guid": "d839368a-d22a-420c-b3c7-d71d90051347",
+               "id": "58",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "异步编程：使用 Future 和 async-await | Dart",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://dart.cn/tutorials/language/futures"
+            }, {
+               "date_added": "13363522637945552",
+               "date_last_used": "0",
+               "guid": "6fc42441-a7b8-4a7e-a6b1-0d8992a634e5",
+               "id": "59",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Flutter数据存储之shared_preferences - 简书",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.jianshu.com/p/735b5684e900"
+            } ],
+            "date_added": "13358431687357818",
+            "date_last_used": "0",
+            "date_modified": "13363522637945552",
+            "guid": "af4d5b39-f04c-42d7-98be-0ff56cc79b54",
+            "id": "55",
+            "name": "项目实训",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13358488607658640",
+               "date_last_used": "0",
+               "guid": "4aa779c9-0646-4cfa-9f12-9b74347eae70",
+               "id": "61",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "PixVerse - Create breath-taking videos with PixVerse AI",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://pixverse.ai/"
+            }, {
+               "date_added": "13358488611226337",
+               "date_last_used": "0",
+               "guid": "4d18a94d-b11f-45ed-a203-18f2cfa88dcb",
+               "id": "62",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Haiper - AI Video Generator",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://app.haiper.ai/explore"
+            }, {
+               "date_added": "13358912498619602",
+               "date_last_used": "0",
+               "guid": "e7872695-60fd-41aa-a769-2427659c47fb",
+               "id": "63",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Home - Leonardo.Ai",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://app.leonardo.ai/"
+            } ],
+            "date_added": "13358488437249431",
+            "date_last_used": "0",
+            "date_modified": "13358912498619602",
+            "guid": "9363b4e5-81aa-4567-b63a-a4756ccc3d51",
+            "id": "60",
+            "name": "AI视频",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13360666499876891",
+               "date_last_used": "0",
+               "guid": "6f2e7b3c-b37b-4967-a6bb-4720f00bd6c4",
+               "id": "65",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "CS-BAOYAN/CSSummerCamp2024: 计算机保研夏令营&冬令营通知",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://github.com/CS-BAOYAN/CSSummerCamp2024"
+            }, {
+               "date_added": "13360768315458153",
+               "date_last_used": "0",
+               "guid": "96282c01-87b9-45f8-aab6-c11ed82acd72",
+               "id": "66",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "复旦大学研究生招生网",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://gsao.fudan.edu.cn/"
+            }, {
+               "date_added": "13360907396788417",
+               "date_last_used": "0",
+               "guid": "bc036ee7-6c6a-4e80-975a-36f743850e73",
+               "id": "67",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "极简简历_PoleBrief简历_极简PoleBrief_简历模板_个人简历模板_在线简历引领者，带给你不一样的体验",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://www.polebrief.com/"
+            }, {
+               "date_added": "13361732110623500",
+               "date_last_used": "0",
+               "guid": "3aa0123e-c29b-48de-a400-1d31612c8ee5",
+               "id": "68",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "软件学院关于举办2024年优秀大学生夏令营活动的通知",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://www.cst.zju.edu.cn/2024/0531/c32178a2926228/page.htm"
+            }, {
+               "date_added": "13361732126810210",
+               "date_last_used": "0",
+               "guid": "92ec4f46-dca2-4e49-ac50-9400a282226e",
+               "id": "69",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "浙江大学计算机学院招收2024年暑期实习生计划",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://www.cs.zju.edu.cn/csen/2024/0527/c27011a2923257/page.htm"
+            }, {
+               "date_added": "13361732131047216",
+               "date_last_used": "0",
+               "guid": "841aacc0-df07-438f-a967-a2300e620958",
+               "id": "70",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "上海交通大学夏令营活动办法",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://ga.sjtu.edu.cn/zsgl/xxgs/xlyhdbfmx.aspx"
+            }, {
+               "date_added": "13362468506278253",
+               "date_last_used": "0",
+               "guid": "a3c2de29-0b6d-48d2-8d63-8ef00b334264",
+               "id": "71",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "中山大学计算机学院2024年优秀大学生夏令营活动报名通知 | 计算机学院",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://cse.sysu.edu.cn/content/7106"
+            }, {
+               "date_added": "13362468516721055",
+               "date_last_used": "0",
+               "guid": "112bc843-b8cf-4197-9715-9ca87ee7c430",
+               "id": "72",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "中山大学人工智能学院",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://sai.sysu.edu.cn/notice/1415979.htm"
+            }, {
+               "date_added": "13362468535534159",
+               "date_last_used": "0",
+               "guid": "96ea9445-9980-4952-986a-9c3422f6b5dd",
+               "id": "73",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "中国科学院上海高等研究院研究生教育",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://www.sari.cas.cn/gradedu/gdzssz/gddxssjxm/202404/t20240429_7141703.html"
+            }, {
+               "date_added": "13362468594293611",
+               "date_last_used": "0",
+               "guid": "79525ba6-f7b3-4c42-b923-7d27b5a59265",
+               "id": "74",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "华东师范大学计算机科学与技术学院2024年优秀大学生夏令营通知",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://cs.ecnu.edu.cn/25/15/c19867a599317/page.htm"
+            }, {
+               "date_added": "13363280216474936",
+               "date_last_used": "0",
+               "guid": "9b02ce96-84a5-48f3-a7ca-34b2bedf7f6d",
+               "id": "75",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "xly.ustc.edu.cn/news.php?newsid=1004",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://xly.ustc.edu.cn/news.php?newsid=1004"
+            }, {
+               "date_added": "13363280218764019",
+               "date_last_used": "0",
+               "guid": "ac7cf912-a7fa-42e7-8380-cdc80b06744b",
+               "id": "76",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "武汉大学计算机学院2024年优秀大学生夏令营-武汉大学计算机学院",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://cs.whu.edu.cn/info/1071/44151.htm"
+            }, {
+               "date_added": "13363285707245156",
+               "date_last_used": "0",
+               "guid": "120fcd76-48c8-4228-82b4-a3b5ecc4cf00",
+               "id": "77",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "研究生招生服务平台",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://ehall.whu.edu.cn/gsapp/sys/wdyjsbm/entrance.do"
+            } ],
+            "date_added": "13360666481362284",
+            "date_last_used": "0",
+            "date_modified": "13363285707245156",
+            "guid": "9488be3d-b000-4e14-bafe-f21e260e158f",
+            "id": "64",
+            "name": "夏令营",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13361546469733634",
+               "date_last_used": "0",
+               "guid": "e389eb50-9ed9-49c5-ba2a-39f7e2951145",
+               "id": "79",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Unity体感应用开发——Kinect V2 获取彩色摄像头数据_unity kinect 获取彩色数据-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/u010941527/article/details/104608886"
+            }, {
+               "date_added": "13361550678963945",
+               "date_last_used": "0",
+               "guid": "10852787-b4d9-4330-a90b-90fbd64790a7",
+               "id": "80",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "获取 Image 组件上的Texture纹理，保存成图片到本地_unity 保存rawimage.texture-CSDN博客",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "https://blog.csdn.net/weixin_45023328/article/details/115006660"
+            } ],
+            "date_added": "13361519048190198",
+            "date_last_used": "0",
+            "date_modified": "13361550678963945",
+            "guid": "eceb779f-c402-45bb-a74b-0ff6e455d23d",
+            "id": "78",
+            "name": "人机交互",
+            "source": "unknown",
+            "type": "folder"
+         } ],
+         "date_added": "13363661958458962",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "收藏夹栏",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13270652621203555",
+            "date_last_used": "0",
+            "guid": "3f52114d-4be7-46b8-a0ec-5218cfaa5202",
+            "id": "7",
+            "name": "哔哩哔哩 (゜-゜)つロ 干杯~-bilibili",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.bilibili.com/"
+         }, {
+            "date_added": "13302867756283813",
+            "date_last_used": "0",
+            "guid": "cdb15559-9fff-4ebf-ada1-e7a8f438011d",
+            "id": "8",
+            "name": "原神社区-米游社",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://bbs.mihoyo.com/ys/"
+         }, {
+            "date_added": "13309369348128257",
+            "date_last_used": "0",
+            "guid": "6bdf321e-0695-40a6-90cb-2bfb9310cf98",
+            "id": "9",
+            "name": "校园大赛-腾讯游戏学堂-成就游戏梦想！",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://gameinstitute.qq.com/college"
+         }, {
+            "date_added": "13326654336322253",
+            "date_last_used": "0",
+            "guid": "d9fb9418-ee63-4abb-95cb-aeb3742a9234",
+            "id": "10",
+            "name": "LIBVIO影视 - 超清在线视频站",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.libvio.cc/"
+         }, {
+            "date_added": "13345731259920220",
+            "date_last_used": "0",
+            "guid": "1fb0c500-6925-4042-b434-fcea25bc3b7b",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "药师少女的独语章节列表,药师少女的独语最新章节,波波小说网",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.boebo.com/indexlist/2689/"
+         }, {
+            "date_added": "13355562674133130",
+            "date_last_used": "0",
+            "guid": "a1ccf471-d843-470a-99a9-3c145927cd32",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "微博 – 随时随地发现新鲜事",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://weibo.com/u/6596201718/home?topnav=1&wvr=6"
+         }, {
+            "date_added": "13361126851429822",
+            "date_last_used": "0",
+            "guid": "652a4974-1d73-4b0c-9718-b22705c799d3",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "SauceNAO 以图搜图,SauceNAO官网,图片搜索",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.saucenao.cn/"
+         } ],
+         "date_added": "13363661958458965",
+         "date_last_used": "0",
+         "date_modified": "13361126851429822",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "其他收藏夹",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13363661958458968",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "移动收藏夹",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCBm7nEeQAQAAEgAqGC9uMHdqdytXVDNJRm54YytRRGxXQWc9PUgDoAYHEqgBCFASowEKHHZlY05YTUdoQ1NiWWhhbjlCZjlLdFVZWHJNUT0SJDEwODUyNzg3LWI0ZDktNDMzMC1hOTBiLTkwZmJkNjQ3OTBhNxgAIAAoADCk9JPO/DE49/mTzvwxQPf5k878MUocWHdKSDdRZENGa3FMWjRtL2JGb1c5M0o1MXZBPVofIh3venZwVFpvOHlUZVlGYTNWOVpGVVRCem9RdTJjPWWO2KY6EqkBCE4SpAEKHC95eWFSVko1U3RLbmM5SnYrOW4wK29HcU9KUT0SJGVjZWI3NzlmLWM0MDItNDViYi1hNzRiLTBmZjZlNDU1ZDIzZBgAIAAoADDkxIm//DE4/q2Jv/wxQP6tib/8MUocU1kzWGFVTlRTeDN5cDhQQktDM28vUkNxNVBJPVogIh7/9TF6amg2NEtORzA5ak9uV1Q0Z0VITTBlTmY3UT1lAAAAABKoAQhJEqMBChxCUENqL040eEVZSzlIQmpxc1plTEtYT0JBamc9EiQ5NmVhOTQ0NS05OTgwLTQ5NTItOTg2YS05YzM0MjJmNmI1ZGQYACAAKAAwlsPpg4AyOKHH6YOAMkChx+mDgDJKHGRnQ1VOTitJL0Q1azZyTUErOEpNZnRKL21rYz1aHyId/mNudEhicjIrTXVONjdhbmQ5WFprTmlvVmR0UT1lAAAAABKoAQhIEqMBChxQM2NQVUdjVnFjbjlRQXFvd1lTSk5PS1hGaTg9EiQxMTJiYzg0My1iOGNmLTQxOTctOTcxNS05Y2E4N2VlN2M0MzAYACAAKAAws6Pog4AyOKmn6IOAMkCpp+iDgDJKHGVWNUFSS0tWei83VFp1c3ljaFZRSHBwSEIvYz1aHyId+3dudi83bllkdW5OY2Z4N25RR1lxaDA0MTJPYz1lAAAAABKoAQhHEqMBChxVVk1yN0w5SWFGUkNSdXdlVkRpdDlSMGs3RUk9EiRhM2MyZGUyOS0wYjZkLTQ4ZDItOGQ2My04ZWYwMGIzMzQyNjQYACAAKAAwsqPog4AyOMLk54OAMkDC5OeDgDJKHEdnOW4rMDhxQ3RHNHY0dnhnQ0tCK0J6UjE4Zz1aHyId93d3Sk9TQVpLdkM1aHpxakVXVEtRUzRMWnhJQT1lAAAAABKoAQhGEqMBChxzUFlBcmVPUzFyNndweXdoNmZWUlMvNnhiSG89EiQ4NDFhYWNjMC1kZjA3LTQzOGYtYTk2Ny1hMjMwMGU2MjA5NTgYACAAKAAw3frWpP0xON3+1qT9MUDd/tak/TFKHHhhYWNwWnYrS0drSlhVRm83M1pVMEp2KysrTT1aHyId7mh3ak1TT3J6VUt3K2xPT0VPVXhYaTVxak1yMD1lAAAAABKnAQhDEqIBChxmeTdaSW1jN1NvSUFxdUZBWGtldTIzTVBMbUU9EiRiYzAzNmVlNy02YzZhLTRlODAtOTc1YS0zNmY3NDM4NTBlNzMYACAAKAAwi5O1m/oxOO+XtZv6MUDvl7Wb+jFKHEhObElKR1ZsQ1V1ektYTVdxN0VpSHl3WU83dz1aHiIcdlZiYWhsN2FGaDY4R0pOQXlWRmxCOVZaZmxNPWX6fyADEqcBCEESogEKHGNrQXR4a0VjTk1MQ1g5dXpvdnJKbXYzZnc4RT0SJDZmMmU3YjNjLWIzN2ItNDk2Ny1hNmJiLTQ3MjBmMDBiZDZjNBgAIAAoADCUksao+TE4qPvFqPkxQKj7xaj5MUocWVRrc2ZaS3RTYjR5WFNIMlRaRGMwWXdLMEM4PVoeIhxZRjVTa0ZCZjA3MUlEYkNDZnAzYkkxKzJ3SVU9ZZNUQ8ISqAEIRRKjAQocZHF0RFNkdE9uZ1dCN1JCaUlSQVg0MUI1OGFnPRIkOTJlYzRmNDYtZGNhMi00ZTQ5LWFjNTAtOTQwMGEyODIyMjZlGAAgACgAMLvZ1qT9MTjh3Nak/TFA4dzWpP0xShx2OWxHRE5XV0RUUk1sN3o3UHJYUURrMTl4MkU9Wh8iHd1vZzJzNGYzSHYyclAwMENLMEdOb3VRdGtkMnc9ZQAAAAASqAEIPxKjAQocNU1wbHFLV0RsRW81TVZtNG9DT2JPM1Jad1pNPRIkZTc4NzI2OTUtNjBmZC00MWFhLWE3NjktMjQyNzY1OWM0N2ZiGAAgACgAMOmfluTyMTjVo5bk8jFA1aOW5PIxShxFQ0VKdExHaHRDdmUybU5IVXJQK3lOOVpNRFk9Wh8iHbZIa0tkd1dUOFVoTU5aTGlPMHdscFVFbkltZ0U9ZUP123MSqAEIRBKjAQocTFl4aVdMbGFMZ0tmMW9seExVREt1aTZpVURNPRIkM2FhMDEyM2UtYzI5Yi00OGRlLWE0MDAtMWQzMTYxMmM4ZWU1GAAgACgAMNKN1qT9MTiJ49Wk/TFAiePVpP0xShxxdWZUZ2lsTFEyZUNldDl4NXlaQWVzV1RXWjQ9Wh8iHbt0QUcyMENkWnh3cnhneWdVZ1ZjZE9kaFFtVm89ZQAAAAASpwEIPhKiAQocWUZXUXFncFJtbEdZTldqblRuMXA0eG5IaWFRPRIkNGQxOGE5NGQtYjExZi00NWVkLWEyMDMtMThmMmNmYTg4ZGNiGAAgACgAMLGYhprxMTignIaa8TFAoJyGmvExShxMTHpDTEsvSGlIRXpHVzVydWx5UDBUMUJCQ1U9Wh4iHGxDb1VzLzZGZE1PSktYbXdQTm1POUNTOGo0RT1lIz6MoBKpAQg8EqQBChxIeFJXZisrVTFreEg5TFdTQk5PZUlHOGhFcjQ9EiQ5MzYzYjRlNS04MWFhLTQ1NjctYjYzYS1hNDc1NmNjYzNkNTEYACAAKAAwqJv8mfExOMzS+5nxMUDM0vuZ8TFKHE41dU9mTFd3cG5BUDRDeDBTblJ4cEhHdlZhcz1aICIe/9RWQW5DKzJJUVpaSXB3ZDlrUmFtUGVSQVQrK2M9ZQAAAAASqAEIOxKjAQocVEdaaWFjTkdSelRpa0hLUWhWVzMweXY2T1BzPRIkNmZjNDI0NDEtYTdiOC00YTdlLWE2YjEtMGQ4OTkyYTYzNGU1GAAgACgAMM/luvqDMjjG6Lr6gzJAxui6+oMyShxaRHYyL1BOM2ZrT0FhWWsvTmRsbzhsMUFqWTg9Wh8iHe42K09qOE9laVlpOWVNZXlUNTBsY3pGVHdzclk9ZblGghsSqQEIQBKkAQocczNTOWhDRlIvQzJtNGVJYnIrNnp3aU4za1hBPRIkOTQ4OGJlM2QtYjAwMC00ZTE0LWJhZmUtZjIxZTI2MGUxNThmGAAgACgAMMbdxaj5MTjn6cSo+TFA5+nEqPkxShxEZyt2K1cvUzdSSFZkUnQ1VzF2VXY5QUpoSmM9WiAiHv/qMmlRYkJkVDFyM29aUFVpQjF1VUM1aE5RL3cwPWUAAAAAEqgBCDoSowEKHDlyc1l2Tm5ZaVVXWU1TKy9VWkttdU93RkROcz0SJGQ4MzkzNjhhLWQyMmEtNDIwYy1iM2M3LWQ3MWQ5MDA1MTM0NxgAIAAoADDbxLr6gzI4q426+oMyQKuNuvqDMkocSTlqcjc2NnF2YTZlRWo3Y1BvRW9IWC9PVlhnPVofIh3cM2R4SUhndGtZdDJvc0FLWC9DL3FKNzhHOGZZPWUAGIoLEqgBCDkSowEKHEZ6QWtYTmwyeksrTlJkSlh1K0hYR3N5SWRmND0SJDNmN2FmN2U0LTlkOTMtNGE2My1hMGFjLTcwZmE3NzA4YTQ5OBgAIAAoADDc8M6wgjI42uzvgfExQNrs74HxMUocajNic0xEeGhqVXA3ZjdVNDl4cUpQUUZDaGxZPVofIh25MzljZU5aTXNwSGVBNGZlaW5jRExvYWFqZExvPWUIL4DVEqgBCE8SowEKHDZRcU0rSzNrc29TY1oyMjdBWE5VTDFUSGtGWT0SJGUzODllYjUwLTllZDktNDljNS1iYTJhLTM5ZjdlMjk1MTE0NRgAIAAoADDkipPM/DE42pOTzPwxQNqTk8z8MUocQmhLOXdkOThTblg2N0J3TWxGaW0vZEU5UUZVPVofIh3ec0NNK0VPdU93citFdlpJbFUyZGhEa2xJTjdBPWWO2KY6EqkBCEsSpAEKHEFKbGwxYlQwZENNL3dQYTl3NUg5eE1SQjJLQT0SJDliMDJjZTk2LTg0YTUtNDhmMy1hN2NhLTM0YjJiZWRmN2Y2ZBgAIAAoADCVwe6GgzI4rcXuhoMyQK3F7oaDMkocd0gwNFFOUUNqelVvQ1ZRK2ozOHpuZTMvaUVZPVogIh7/tE5vK0FRZU04RGFqM2RoMmdNY1c3UUhIMjRpST1lAAAAABKpAQg3EqQBChxFNkgwU2NPT0Ewc0p1Z2M4SUplMkxjSkYraVU9EiRhZjRkNWIzOS1mMDRjLTQyZDctOThiZS0wZmY1NmNjNzliNTQYACAAKAAwjrL0/vAxOKrv8/7wMUCq7/P+8DFKHDk0MlcyRSt3RHBqNFM4cEtxeXczWHRKUGlKVT1aICIe/6lCMldRZnhSb1RsMWVBVGhha0lMc0I2R3l2WWc9ZQAAAAASqAEIERKjAQocejZ0Z3Z1cTlaNVIrWjEvbGFkNkg5VjhnSXVFPRIkNGVjOTM2NmEtYjQ2ZS00ZmE0LThlNGEtZDI5NWVjZDhiNWFiGAAgACgAMIXswau1MDiV08GrtTBAldPBq7UwShx3VWNXNVZ6cjBYamxaWDkvUGcxYWMzQ1lXWG89Wh8iHfpKOXhGdEtIbGovNlF1ZHJZZitlWHdaamVWR009ZQ33LE8SqAEIJhKjAQocZTFMWXFIeWpXeTZKNEk4SkxHRWpReitpenprPRIkMzkyODc1MDMtNmFlMy00OWIwLTg3NzYtMTcxZjBlNGI2MDhhGAAgACgAMKOEwaflMTj+hsGn5TFA/obBp+UxShxjUm5FMXMzamZSckZ4SEYwUzByclhZUmYveWs9Wh8iHbU3ZW1lNHYraTk2VEV5UmJUdnFsU1BJR2ROM2M9ZY7YpjoSqQEIMRKkAQocY09iZnVSYUV6aVBoRUY4d09IN0R0UlJPdm53PRIkNWM0YTQ1ZGQtNzQzOS00ZTg0LWFmYjEtNzZiMzI1MzAwZTZkGAAgACgAMLCencf9MTiEop3H/TFAhKKdx/0xShxXcDUrYm9GSlFEQk8zMVJNbVI3Yk94cGxxRzA9WiAiHv/daVNFUTFRU0ZjaUUvUmkzTnhCdnlUdHlCSGFjPWWO2KY6EqkBCDASpAEKHGFEbnJXS3Q2N1BrRHR6YVVwLzI1TENJYTQ1cz0SJDJjYWZlYTJjLTcyZGYtNDFmZS05ZmM3LTc2MzRkOWNiMGU5NBgAIAAoADCxnp3H/TE4wtGcx/0xQMLRnMf9MUocYlhsd1pRUTdjQ3diblQ0cFJ5WmdtcUpoN1dRPVogIh7/u0tOcGRDRklIVzluR1o3VDIyaTl2amlVZFUrVT1ljtimOhKoAQguEqMBChwreEdab2VkekhSME9KcHhTMlk0dDBDYmxDYXM9EiQ0MjAyNTU4Zi1hZmFiLTRiNjItYmViYy04M2I3Nzg1Mjk1OWMYACAAKAAw0uLt4u4xOLnn7eLuMUC55+3i7jFKHFlaeGpSMVRiUzNYQ1hZeGUvY0thZ3pVOFg0ND1aHyId/3I5UHByNS9qWEFFWlJGcmsrWHo3Rm5SUnEwUT1l48k2GBKoAQgSEqMBChwwK3ZpSCtiaHNMdVFjU2pORzR2SkFZbWpMaFE9EiRhNmQzNTkxNC04NTdjLTQyYjItOGY5ZC03NzY4MTEwMjY4YjkYACAAKAAw2PnF17UwOLr6xde1MEC6+sXXtTBKHDNHcm5kUi9MdGVEM1FWMU1DcXRBNUMzeGxPWT1aHyId/W5qa0NtVks4bENZSlZGUXI0MGlsc3FieExMdz1lwBoNABKoAQgqEqMBChxESmtRVitRdmw3akVmT1FuRFNIUVM3eXYrTUU9EiQ3ODk0ODMzOC1lODNhLTRlM2YtOTllNy1kZTczOWM1M2VlYzAYACAAKAAw2ZHsy+4xOJvy68vuMUCb8uvL7jFKHHE2Q09UMnAwWjZ0MWNSZVFFNnRCUjhyVzU2WT1aHyId+0pqU1BtaWtjUy9SVG9FdHNFbWdyS1JiTTJ2ST1ljtimOhKoAQgoEqMBChx3RjBoT2RzNTIwVkRJbVdPS3Z1ZjdCaitqSUU9EiQzNTEzNDczOS0xOTAwLTQzZDQtYjYyMC1hMjNiYmIwYjMyZWEYACAAKAAw8eXv8uYxON/p7/LmMUDf6e/y5jFKHFRsWjN3TytJdnp4d0U2Z2JWdFpSSzE0STN5UT1aHyId7UNXMW9zVnNLZlNiOVBOMGNPN3BXTnBTN2VFND1lQU0uZxKoAQgpEqMBChxraWxEaU52a0t5dFUwd0VtTGFIcVhUSmVSeTg9EiQwNDM3Mjg2My1kOTg1LTQ1M2YtYjhhMC0wMTAyNTRjNTYzOTEYACAAKAAw+JOP8+YxOMKYj/PmMUDCmI/z5jFKHE1INnVjWjc1U3U2djNQMzhQNUErOXJkbWd6Zz1aHyId9llBSVlrenl5Z2lPWGRJL29hR1cwcGh5YXRTND1ljtimOhKoAQgnEqMBChxjU3o0eGQzTkxpR21WYUhocmlEK0RmYXo1K0k9EiRmZjI1ZjkyYi04M2Q1LTRjOTItOWI0Ny1iNjc4N2NlYjJkMmIYACAAKAAwsbrr8uYxOOel6/LmMUDnpevy5jFKHEQxMVF0NSswNmxROGFlTENUUnRRVTRpZWdBYz1aHyId2mpybzRidDhMWGEvYTd6NFFhWm9lbUhVN3p5OD1ljtimOhKnAQglEqIBChxMT0ZxZ0JNKzJaSVJiaUpVb0UyZUlhSUVuUVk9EiRkMmEzYjU1OC1hZjE4LTQwYWItODA5OC1jMjcxNmFjNjI1NmMYACAAKAAwqMSNpuUxOM6vjablMUDOr42m5TFKHFk4cnJwL1Z5dEtGWm1zMUtzU0NmelBGS0dFQT1aHiIca2VZL1hWbkZLcW9GREUvZytrZDJNVXgwYlRvPWV8ovoKEqcBCCQSogEKHDNWeHo3MU9TMzF1R1QvWjFuZ3ZkQnYvNis2QT0SJDBkYzQ2MTcyLTQ2M2MtNGI0OS1iMWFiLWMwZDYwZGZmM2JiZBgAIAAoADCpi5yb5zE4y66bm+cxQMuum5vnMUocbUdPNzhsUnFXanBpbTBjQTVxbnoyakZnaGNRPVoeIhxkajROSm1MSU9rbnJXbWw4dStJQUpZZXhLNDQ9ZePJNhgSqAEIHhKjAQocQzJFVkp4TjBhWHorQTdxN01QNThiM2Z2eGxrPRIkMjEwOGExYTctMDEwOC00ZjMwLTllYjgtOWNkMjc2ZmMyYzViGAAgACgAMOHGt5i7MTi1nreYuzFAtZ63mLsxShx3K1Z4UXgzcUZFSjd0b2FaTTdHTlFiSThWenc9Wh8iHblSQWFHMjRpaTlxcGVEZkMxdE1HRDA1amMzWHM9ZY7YpjoSqAEILRKjAQocUmVldHZybEYzTjA1RnZFOVZXdjVxK1d2Mk1VPRIkNTQ0NjE2ZGYtZDJmMS00NDNjLWEyOWQtMTc4MDkzOGU1MTEyGAAgACgAMM657OLuMTjKv+zi7jFAyr/s4u4xShxPL2FBcDNhUlo3MXRaSld2TXZySGI5NFJpNk09Wh8iHf9ZczdsMVgrWnFVdE03Z29vVkEyLzIwaUNVY009ZY7YpjoSpwEIHRKiAQocb3g1TUR0b2NOMkFQbjgwcVR6ZzhJVTFyTlNZPRIkNjZmYzI5MzktODQ0MC00NDljLWFkZDAtNjUxYzA2YTEwYTI5GAAgACgAMKCf2beyMTiTidm3sjFAk4nZt7IxShxiRVNjU3JlLzlmRklHR3hmSGxLbVVYV2ZvR1E9Wh4iHHNwOG1rbDF6WjNXT0ZYMUQrTVZ2VFA2WDhVST1ljtimOhKpAQgbEqQBChxzTS9kNTYvcnVrdk1DcGFicU5rUEhrZm81NGc9EiRlMDM0NmE1ZC0wOTBlLTRmODItYjM1ZS02MGU2NmM4ODBkMWUYACAAKAAwt5eBi+oxOJSCgYvqMUCUgoGL6jFKHElEeXE3UXorYWR5RlFGeVBweXMwYjI3bExlZz1aICIe//9NdzBxbWFuZEJYd3I4aTNBSHUybWkvL095bm89ZaYnPdsSqAEIKxKjAQocbE5jTGx4TWttRkdpayt6a25VODZ0YWdNZ3pVPRIkNjdjZGVkNzYtN2MzZi00ODI4LTgyNmItNDc4YmQ2ZjI1NTU1GAAgACgAMMfv/MzuMTiK9PzM7jFAivT8zO4xShxURUJoMWdxNm1VSmRjUlBtRlRVSXdUS0JDc1U9Wh8iHf1RaVMzQW95Wk4xNEJBTHlQNmNOWnZRUzR6djA9ZY7YpjoSqAEIIxKjAQocWnB0WnZNaXdCaGVKMzVoTVdZL2RYV1FuZTFNPRIkN2RjN2UzNDItNTZhZC00YzQ0LTk4OWEtOTY2YTc4OTIyMjQyGAAgACgAMNSVjablMTju9oym5TFA7vaMpuUxShw4TXJzRUN6MStlMUQ4cDdtby9RaXlKTlk2T0E9Wh8iHf9SSnp6SDlPbmdnOEhzNDAvYWZNTFhFN0Vwb1U9ZQAAAAASqAEIChKjAQocRktvbkhUdUg5bzVXNmk2TXdKUFlveXRGQ200PRIkZDlmYjk0MTgtZWU2My00YWJiLTk1Y2ItYWViMzc0MmE5MjM0GAAgACgAMOHg66rSMTiBmqTO+jBAgZqkzvowShw2aWhmajVBUG1MMVV5Um56TnpmdklOeTJPTVk9Wh8iHf9YOUwyY3lBRUc4ZWhBcjE2bFBlZ2tHR0VxWWs9ZVvTD34SqQEIGhKkAQocSEpTYThkbjdtK0pkTlRzSzBGbGltaDI3OThzPRIkZmU2N2Y0NzctYmZkYi00YmMzLTlmNjctMTA3OTY2NGU0NTJiGAAgACgAMKzZuJfgMDiU2riX4DBAlNq4l+AwShxLa0FHMlFVNkt0V1JkZGZhYk0wWGgrTFZmRkk9WiAiHv/7NjhHd1JMUlFpY0ZmWDdSNm9ZaVhSTVZpcE1jPWWO2KY6EqgBCCASowEKHGx2d0RzWXBXTVhxOUZ0WFRDdjlhbmprOGVkTT0SJDVhMTQyOTVhLWU2YTEtNDk0ZC05MGQ1LTM4MzdjOGZiOWNjYhgAIAAoADDI6M71wjE43srO9cIxQN7KzvXCMUocNFhvSTlLdk9DUjJ1cWk1QlZlc1ZFcUxaRmxRPVofIh3uYmxaZERjVURrcFFlbXlRLzlKeExhODhSemRZPWVBTS5nEqkBCE0SpAEKHGRzMzVNYUd2ZFJpUUgrenNYU3pJeSttenJ4dz0SJDEyMGZjZDc2LTQ4YzgtNDIyOC04MmI0LWEzYjVlY2M0Y2YwMBgAIAAoADDv1b2JgzI4qNq9iYMyQKjavYmDMkocYmVGYmtSOUlqbHcvdXlob0dQK1YzRm95NzdFPVogIh7/7UN4ODFFWG9WVjNMVStsaVc5SVNIZmp6ZGI0ND1lHXD3uBKoAQgJEqMBChxzN3FJY0prNTRBd2dUL21ieWRaRWFsNTI0UUE9EiQ2YmRmMzIxZS0wNjk1LTQwYTYtOTBjYi0yYmZiOTMxMGNmOTgYACAAKAAw672UnLowOJyklJy6MECcpJScujBKHGRRd2liQjBkU3FBWWRHSEJ5Tk5UcmhmKzBZQT1aHyId/ytvWkEzTFBYakZvV3pWL1I0L24xdUo1WUpSMD1lkBWoHBKoAQgcEqMBChxkZkpHTWhXaFl5azdYRXZzMFRMaDd5QnBTSDQ9EiQ0MTUxYTE5ZC1hYTBhLTQwMDYtOGUxNS1lMTczMjU5ZjkzMTMYACAAKAAwu/DYt7IxOJSb2LeyMUCUm9i3sjFKHEgwb09BWEdrQ0pRNTlHVE9MM2VmbUpiQ1RwQT1aHyId9mFyUTZ1ZGRUUEtSOFZPc2tCV2owOE5xMzAyTT1lAAAAABKoAQgXEqMBChxCOXNua3d2Rk4rY2tJc1hFSk0ydUQycDJ2clk9EiQyNTZiYmFkMC03ZWY2LTRmZjAtYmY0OS00NTM5YWQzNjA3YTUYACAAKAAwnK7a/ZowOOuP2bz4L0Drj9m8+C9KHDIvMTNtVEhtS3Z4QzZhM1VBd2tZOHVqQXQ2dz1aHyId/kxWM0pLaWorNFZ6Tmo1b2V0WlNLRU9VS3RCbz1lXqly7xKnAQgWEqIBChxhV3E4OVRueE1uNWRwTFFyUUtzRGc1NTBCMTg9EiRlMWZjYzdkMi1iMTM0LTQzMWQtOTg2Mi1mY2Q3MzM2NDJiNWQYACAAKAAwk/2zqsYvOJPy79/lL0CT8u/f5S9KHEh3MzBZMVhFTmc2eER5WWxMQ1lJUXdWeFhzND1aHiIcdmpZcVpKcW93ankyazBrM3FnZThaQno2SENzPWV8ovoKEqcBCBQSogEKHDR4SmhvREFES1RBYjVyc3M0MXpxTHZhYitzVT0SJDdkM2UzZGJkLWRjZTgtNDFkNy1iNWVlLWUzYmMzYjc2YzhiYxgAIAAoADDn5rOqxi84x/Dv3+UvQMfw79/lL0ocUDFsRVBDdjcxMC8zdnBjTjhLcUgyZTJqV3ZZPVoeIhxESzYyMndqVi9JcEtmanNGcEFJMDd1T3IrMHc9ZQAAAAASqQEINRKkAQocUGtkS0FCSjNqSks2alplZ3lpeEFuREdpWC9rPRIkOWI1ZmFmZTMtODU1ZC00NDg2LTg5YjEtM2ZmNzRhMDBhNDRkGAAgACgAMMTg7uL9MTiD5e7i/TFAg+Xu4v0xShxHa2JIVXdOQmhyYm1ZK0tFTHZGYmV4YURLRFk9WiAiHv/9UEcwNGt4cjJuUVpYdUtDSVZwc3AxWmpka3NNPWWO2KY6EqgBCBMSowEKHHJxS3J6Sy85N25vcUFYY1hnWGFxdFFCTVpHUT0SJDBiZjMyZGY2LTI5MmUtNDI1Yy04MWMwLTQyM2ZiNjEwYTAzMxgAIAAoADDAodOS4DE434zTkuAxQN+M05LgMUocUURzL2pSUkxBd2hJZVVNNVJib1BBY1dCN2dFPVofIh3/SU1BRXVWcFQvRi9obzZLbVlySGtoQ2ZidzJ3PWUAAAAAEqgBCC8SowEKHDVhZmZEMXM3UDlQZWpTdE54Tms5NjhhaW5pST0SJDA4ZDYyNDY4LTFhYjktNGRjMC1hMzhmLWUwZGMwYzUwODUyNhgAIAAoADCDzvaQ7zE4ttH2kO8xQLbR9pDvMUocQ0loUGl1cXpWNm0yb3BIckdROThQUW5OYldrPVofIh3/dnNjaWZXd002VXdHS3NQdzlmb2d5aHp3b2FvPWWO2KY6EqgBCCwSowEKHEhDb1FibTltbHJKNzErZWtOSmZ1cm5oUTA2WT0SJGMxMmNhYjUwLTZlMjctNGRjOS04MTU0LTNlMDI1MTI0MjMyMhgAIAAoADD1l7TN7jE4tpq0ze4xQLaatM3uMUocN21Xd2toN09Nd2FVR2ovdkU1WmpXK3ZvNldRPVofIh3+L2tkdXpYYjV6RE1BWWMwbXg3RkFwUUlDVUdBPWV8ovoKEqgBCCISowEKHDVMSG9qK20wdWhtYkVlVzAyRkFhMGltd1NyQT0SJDI3NmM0OWRiLTU0MzYtNDdiOS1iZGQyLTQ4MjAxNDdjYmZmNhgAIAAoADCdx+WXwzE4iM3ll8MxQIjN5ZfDMUocNldCanlvU0dkYldpeXgxZUlJTDdncldxQjJvPVofIh37UkRtRWhVSmF2aHUzU2xsNHFYSWdTMm5WMGY0PWVBTS5nEqgBCBgSowEKHHo2YUgxcTI1aDcxelg2cEkvZkJEeFo1VHIzMD0SJDk4YzM1MjQxLTdkYmUtNGIwYy1hOTYzLWY2MjliZjNkZDUzOBgAIAAoADCUqLCqjTA4jZKwqo0wQI2SsKqNMEocaWhHaEhzdWNUOXFzUmlZVUlqa2J0NHNqYTVBPVofIh3/TDd1Z3dPMXdDUXNXNVpEcDhWeWpJcjZJdUZBPWXoAqzOEqgBCEoSowEKHHJYNHdYMkk5V05JZmY3b200WStnNHhQZGNiMD0SJDc5NTI1YmE2LWY3YjMtNGM0Mi1iOTIzLTdkMjdiNWE1OTI2NRgAIAAoADDMje2DgDI42ZHtg4AyQNmR7YOAMkocbi9tcVU4dElkMlZYeWdQSHFnR2RlMHk1SEtzPVofIh3/aTRvLytRRUtlY3ZGR3NUU0pWTlJBa1BhLzdvPWUAAAAAEqgBCAcSowEKHDQwSWVXemgzYnI5Y05iL1N2U25ZUjNDREsvRT0SJDNmNTIxMTRkLTRiZTctNDZiOC1hMGVjLTUyMThjZmFhNTIwMhgAIAAoADDhiPuH0jE4pOju3+UvQKTo7t/lL0ocRHRkaTdsK0R5aXNQd0J4UjZ1aUFuZ3hERzBjPVofIh29aTZuKzFLWVZScUVtbWgxenlpdzZiTjFYajdBPWXF9OGAEqgBCBUSowEKHFJEVTE0cS9kNmxLT3VzcU1Camw5YjlpTmJGVT0SJGI2NjRjM2VlLTc0YTgtNDZjNC1hMGVhLTAxMmE2ZTBlYTQzNBgAIAAoADCoqrSqxi849Pbv3+UvQPT279/lL0ocMXgvbmdJakJhWngvaFBGczN6THVrN29ZaEswPVofIh0gZnI1M0h4YldteGcvenZIeTV3aFdFK0NXbDJjPWVRuIUUEqkBCAsSpAEKHDBWTWFmMEg0WXNuQXJCNlo4bklUTkhyYnZacz0SJDFmYjBjNTAwLTY5MjUtNDA0Mi1iNDM0LWZjZWEyNWJjM2I3YhgAIAAoADCXwO/WwTE4pqrv1sExQKaq79bBMUocMEQvNzE5TnRsM3lacUpmN3JPMU80UUMxcHdBPVogIh7/9mloTVVOSmQyYyt0dXYvRUdJV2ZtSEVRcjJtUT1lv6nVARKoAQgQEqMBChxNbDZEM3ZMTS8rMFRHSlVnQmMyS0xPL2pXL1k9EiQ2ODdkYWJjZS1hMzcwLTQ5MmEtOGZjMC1jM2Y1ZjdhN2Y2OWQYACAAKAAwu/+8zJExOKzdxfKbMECs3cXymzBKHEN3bjBtN0QzVStaY3dzazdIdStiWUdEbjNoVT1aHyId629NZVAxeVFPV1oxaWRDNmt2SCs5ekFRdHowMD1ly4814BKpAQg0EqQBChxuNWhDU3FSeXhrT0ZjaGVESkJ3WXJrb0ZsWVU9EiQ2ODZmMmUzNC0xOTQ3LTQzNzMtOTEwMy03NDkyMGNmYTFmZDQYACAAKAAw0vOdx/0xOL33ncf9MUC9953H/TFKHGxzYzdqQXdWaURHMWZRUG9YajcwTCs4TG4wdz1aICIe//s3cTlWVjhsbUdnWFZ5ZXhyZTFPdEZxNWkwMUE9ZY7YpjoSqAEIDxKjAQocM015QmhsOTB1OXpPdm9ZaGxjZml3aTdReDhJPRIkZmVlOTViMTUtMWExMy00MDUzLWEyMzItMWIwMTY2OTM5NzkxGAAgACgAMLu9wIjBLzi55e/f5S9AueXv3+UvShx6eXRtRGNYWlErc1F4ODl5UVlGN25JYjVZYTQ9Wh8iHaxYM3FiajFIK1JNOEtnL00wSUJKQVFBYUY0RTA9ZV0OzFsSqQEIMhKkAQocTVdmMFlVSTZmbng0Y2h4YUF5V2RlemxWY0t3PRIkYzJmNzExZWYtOGI0NS00Yzk1LWE5OTgtMWRkZDg1NDJiZDhiGAAgACgAMPq+ncf9MTjdwp3H/TFA3cKdx/0xShw0QU1Lc3ROL0IrQzd3a2dlVjZpc3BUMEszbEk9WiAiHv/uSlQxWHFwTU5WeHNsL2J6Y3RlZE9BVU1QYjdNPWWO2KY6EqkBCEwSpAEKHE8vcmdJdU5qMVJKSFZHM1o0M0xRZ3JPVzBJOD0SJGFjN2NmOTEyLWE3ZmEtNDJlNy04MzgwLWNkYzgwYjA2NzQ0YhgAIAAoADCT2+6GgzI4jN/uhoMyQIzf7oaDMkocRlhUTk9uTVUvcnEvUGhBZ0RUK1d4bWI3QzZJPVogIh7/2jZjZTlRVkdlWGdsMlRjTFNjbzk0bjRxYUhjdz1lAAAAABKoAQgOEqMBChxFZG9WODNLNUF5TytxcTQ0QTJURXdvSkVEZ3M9EiRkZmQwYzgwMC1jODAwLTRkN2YtODNmYS01ODk3OTYyY2Y3MzYYACAAKAAwyKe1qsYvOM/479/lL0DP+O/f5S9KHE9DME5XODZCRU5CUWFzWEtpMUErN1pEdjZDST1aHyIdInBuM09iL0grL2diWUtYY3VFQlhvWDNDWnE0az1lAAAAABKpAQgZEqQBChxrSUtZby93d01IR3NmbnBaMFdPbDlCa1A3OG89EiRhMGFhZGQ0Ny1lYmI5LTRkNzItOTljMy1lNTE2ZDcyYTVmOTAYACAAKAAwmPbyvIQyOPXNgOvfMED1zYDr3zBKHGNwUS9ON09NRDdhTVdyTnZQMUZuR0tUcUN0WT1aICIe//ZBS201NnNEQ2c1RWVOaFNmRm9sbk5RbDVrSjg9ZZNUQ8ISqAEIHxKjAQoccjhOelJxT3Y3d0hJVGFuMUliMmFERUk0SjFzPRIkY2ZhMDk3MGItZGIzNi00MmZiLTg3OTItNTk2NzAxNzc5ODFjGAAgACgAMMyXvJi7MTicnLyYuzFAnJy8mLsxShxRS0hrNTFCK2lBblZTcU96RlhnS0xucFpjR3c9Wh8iHdxFNlcyN2FZSHN5ZnBtYll3Z2pxRXRjYkJyblk9ZUFNLmcSpwEIOBKiAQocemp0c1BySUhrTzkwUkR2ZitSZmxrb1hRdnlBPRIkZjU2NzNlNWUtZThmMS00NGYwLTg5NzEtYzcwZTRmMzE1NmNhGAAgACgAMIrJ9P7wMTjPy/T+8DFAz8v0/vAxShxjT2NhSTVUcm9jQzBiZTJieWtuT3lSZGM1MWs9Wh4iHENGMWx4cW1GYVZEamo5aUdncmYxRjFXd3kvbz1l4nIJkhKpAQgMEqQBChx0WGFuTExDQkFXaWp0dzkzeS9HRXkySkliNzQ9EiRhMWNjZjQ3MS1kODQzLTQ3MGEtOTlhOS0zYzE0NTkyN2NkMzIYACAAKAAwrbHtpuYxOI6b7abmMUCOm+2m5jFKHC93VktxNlNBN2hhRCt3TFVXWUdwM1ErZExXbz1aICIe//00YmFMa0dZRExhd3Yra25uQy94eXA1dXV3cVk9ZSEBL2MSiQEIAxKEAQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkNmFhNTQ3YTktZGE2MC01MDQ4LTg0NzAtNjQzYjM3MDM2YzE4GAAgACgAMLXSjJ6wMDi24e7f5S9AtuHu3+UvShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAABKnAQhCEqIBChxEb1NpV2hzT21wRE9KS3NHNFBNckVjbXVRa0E9EiQ5NjI4MmMwMS04N2I5LTQ1ZjgtYWFiNi1jMTFlZDgyYWNkNzIYACAAKAAw2KeM2fkxOO6qjNn5MUDuqozZ+TFKHHBJMjFkekVsVXJYZWdhWE96WjVWYnRZbTBlVT1aHiIcaytvYlNpaVJ6YWdteEhFRFE0U3A2Qmp0TVVBPWUAAAAAEokBCAIShAEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SJDYyNjNhY2JlLWQ0NjEtNWNmMi04YjgwLTg3Y2U3ZTBjZmNjZhgAIAAoADC10oyesDA469/u3+UvQOvf7t/lL0ocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAAASpwEIPRKiAQocSjdhNVlHalpVTVJOQlBBVEF3RXJGOFM2Nm5vPRIkNGFhNzc5YzktMDY0Ni00Y2ZhLTlmMTItOWI3NDM0N2VhZTcwGAAgACgAMLCYhprxMTiEgoaa8TFAhIKGmvExShxzbmVGVFU2YWZJeGsyTWpUMGRIcGZOWmxWUTA9Wh4iHFFINFNaYmdZU0NUYW11Mi9LTU40TG53NFM3bz1lWhNgwRKpAQgNEqQBChxTUG9PYm9UVVlicHA2Z2VVTXBIRU8xNzE4Vmc9EiQ2NTJhNDk3NC0xZDczLTRiMGMtOTcxOC1iMjI3MDVjNzk5ZDMYACAAKAAwhvyHhPsxOLPXh4T7MUCz14eE+zFKHDdVYVJjOWNGTHhqRjF5Wkxtd3Bkc1V4TFNrYz1aICIe//5WcW8rTlZXeGdJdHFUVDIwMXJkbW1YSTlKdHM9ZcapKQ0SqAEICBKjAQocYlVyZEowRmZ3Q0hYODlCK0MxV3haN2JrSWpnPRIkY2RiMTU1NTktOWZmZi00ZWJmLWFkYTEtZTdhOGY0MzgwMTFkGAAgACgAMODf+/+hMDih4vr/oTBAoeL6/6EwShxCTVVvdTBCcDhrcEh3TndJOFFQSkxPemVLbzA9Wh8iHftwS1M3Nk9PN0dUNlM5d2RZT3ptMHNoVVZkTVk9ZbqazXESqQEINhKkAQocTTQwVGRQTTZKMUdVcllhYUMvbjM2b3dKdzQ0PRIkZDg1YThkZGMtYjcwNS00ZTZjLTg3MDEtYjU3YWZmOGNjYWE0GAAgACgAMKvU9OL9MTji1/Ti/TFA4tf04v0xShw4dWdZc3BhNUptKzMveGtFRDFJd1lSL3BVVTQ9WiAiHv/+a2dlOXEwY3oxQ1ZwL2JDU3NlZHhCNTk5Ym9VPWWO2KY6EqgBCCESowEKHFFwTlVjRUc0bFV3M3NRcmlESTRkaDN0a3hqND0SJGJiNzEyZDFhLTI2NWMtNDUwYi1iMGU4LTQ5NmVmOTUwYzUzYxgAIAAoADCbgJSSwzE4lIWUksMxQJSFlJLDMUocU0JXa1NJM1RCTXUyQ1djYmNxTm01a2c4Y3pvPVofIh33YmdyNTE2eTFXdVVPVTJpUG13aGMzMzFnSjBFPWVBTS5nEqkBCDMSpAEKHFJWQVJkTWNVL2tQS0NBUFBqM0NOaFBGSkp1dz0SJDE4ZTRjNDU1LWRlMzUtNGY4MC04MTIwLWUwYmVmZDU2NWZkZBgAIAAoADCV2p3H/TE4+92dx/0xQPvdncf9MUocUE5LRGNHOWtZRjFRTlp4dXgrZzZSeTdlTDZzPVogIh7/9zFMaldoUzA1TWh1TUdTVWpnamJWd3lmdHlUVT1ljtimOhKJAQgBEoQBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQ3YzFjMDk4NC03OTc4LTVmZmItYjdhZC1jODY3YTc2NmRiZjUYACAAKAAwtdKMnrAwOIPj7t/lL0CD4+7f5S9KHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAMAA4AA==",
+   "version": 1
+}

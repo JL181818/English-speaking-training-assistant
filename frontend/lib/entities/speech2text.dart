@@ -3,11 +3,11 @@ import 'package:json_annotation/json_annotation.dart';
 class Speech2TextEntity{
   late double score;
   late String correction;
-  late List wrongWords;
+  List wrongWords = [];
   Speech2TextEntity(Map<String, dynamic> response){
     score = response['PronunciationAssessmentResult'] ?? 0;
     correction = compose(response['Words']);
-
+    getWrongWords(response['Words']);
   }
   String compose(words){
     String res = "";
@@ -22,7 +22,14 @@ class Speech2TextEntity{
     return res;
   }
   void getWrongWords(List words){
-    // for(var word )
+    for(var word in words){
+      if(word['Errortype']!='None'){
+        wrongWords.add({
+          'word': word['Word'],
+          'score': word['AccuracyScore']
+        });
+      }
+    }
   }
 }
 

@@ -1,0 +1,288 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.untitled"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:3:5-66
+15-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:3:22-64
+16    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+16-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:2:5-70
+16-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:2:22-68
+17    <uses-permission android:name="android.permission.BLUETOOTH" />
+17-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:4:5-67
+17-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:4:22-65
+18    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+18-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:5:5-73
+18-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:5:22-71
+19    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" /> <!-- 外部存储的写权限 -->
+19-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:6:5-75
+19-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:6:22-73
+20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 外部存储的读权限 -->
+20-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:8:5-81
+20-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:8:22-78
+21    <uses-permission
+21-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:10:5-80
+22        android:name="android.permission.READ_EXTERNAL_STORAGE"
+22-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:10:22-77
+23        android:maxSdkVersion="32" />
+23-->[:file_picker] D:\OralAIApp\OralAIApp\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-35
+24
+25    <queries>
+25-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:12:5-16:15
+26        <intent>
+26-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:13:9-15:18
+27            <action android:name="android.speech.RecognitionService" />
+27-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:14:13-72
+27-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:14:21-69
+28        </intent>
+29        <intent>
+29-->[:file_picker] D:\OralAIApp\OralAIApp\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-18:18
+30            <action android:name="android.intent.action.GET_CONTENT" />
+30-->[:file_picker] D:\OralAIApp\OralAIApp\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-72
+30-->[:file_picker] D:\OralAIApp\OralAIApp\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:21-69
+31
+32            <data android:mimeType="*/*" />
+32-->[:file_picker] D:\OralAIApp\OralAIApp\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-44
+32-->[:file_picker] D:\OralAIApp\OralAIApp\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:17:19-41
+33        </intent>
+34    </queries>
+35    <!--
+36 Required to query activities that can process text, see:
+37         https://developer.android.com/training/package-visibility?hl=en and
+38         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+39
+40         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+41    -->
+42    <queries>
+42-->D:\OralAIApp\OralAIApp\android\app\src\main\AndroidManifest.xml:12:5-16:15
+43        <intent>
+44            <action android:name="android.intent.action.PROCESS_TEXT" />
+45
+46            <data android:mimeType="text/plain" />
+46-->[:file_picker] D:\OralAIApp\OralAIApp\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-44
+46-->[:file_picker] D:\OralAIApp\OralAIApp\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:17:19-41
+47        </intent>
+48    </queries>
+49
+50    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+50-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-76
+50-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-73
+51    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+51-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-75
+51-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:14:22-72
+52    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+52-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-75
+52-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:15:22-72
+53    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+53-->[com.google.android.exoplayer:exoplayer-core:2.18.7] C:\Users\11730\.gradle\caches\transforms-3\1c54749537a4d1ff3f2079d73b98930f\transformed\jetified-exoplayer-core-2.18.7\AndroidManifest.xml:24:5-79
+53-->[com.google.android.exoplayer:exoplayer-core:2.18.7] C:\Users\11730\.gradle\caches\transforms-3\1c54749537a4d1ff3f2079d73b98930f\transformed\jetified-exoplayer-core-2.18.7\AndroidManifest.xml:24:22-76
+54
+55    <permission
+55-->[androidx.core:core:1.10.1] C:\Users\11730\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+56        android:name="com.example.untitled.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+56-->[androidx.core:core:1.10.1] C:\Users\11730\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+57        android:protectionLevel="signature" />
+57-->[androidx.core:core:1.10.1] C:\Users\11730\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+58
+59    <uses-permission android:name="com.example.untitled.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+59-->[androidx.core:core:1.10.1] C:\Users\11730\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+59-->[androidx.core:core:1.10.1] C:\Users\11730\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+60
+61    <application
+62        android:name="android.app.Application"
+63        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+63-->[androidx.core:core:1.10.1] C:\Users\11730\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+64        android:debuggable="true"
+65        android:extractNativeLibs="false"
+66        android:icon="@mipmap/ic_launcher"
+67        android:label="OralEnglish" >
+68        <activity
+69            android:name="com.example.untitled.MainActivity"
+70            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+71            android:exported="true"
+72            android:hardwareAccelerated="true"
+73            android:launchMode="singleTop"
+74            android:theme="@style/LaunchTheme"
+75            android:windowSoftInputMode="adjustResize" >
+76
+77            <!--
+78                 Specifies an Android theme to apply to this Activity as soon as
+79                 the Android process has started. This theme is visible to the user
+80                 while the Flutter UI initializes. After that, this theme continues
+81                 to determine the Window background behind the Flutter UI.
+82            -->
+83            <meta-data
+84                android:name="io.flutter.embedding.android.NormalTheme"
+85                android:resource="@style/NormalTheme" />
+86
+87            <intent-filter>
+88                <action android:name="android.intent.action.MAIN" />
+89
+90                <category android:name="android.intent.category.LAUNCHER" />
+91            </intent-filter>
+92        </activity>
+93        <!--
+94             Don't delete the meta-data below.
+95             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+96        -->
+97        <meta-data
+98            android:name="flutterEmbedding"
+99            android:value="2" />
+100
+101        <provider
+101-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-19:20
+102            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+102-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-82
+103            android:authorities="com.example.untitled.flutter.image_provider"
+103-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-74
+104            android:exported="false"
+104-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-37
+105            android:grantUriPermissions="true" >
+105-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-47
+106            <meta-data
+106-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-18:75
+107                android:name="android.support.FILE_PROVIDER_PATHS"
+107-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-67
+108                android:resource="@xml/flutter_image_picker_file_paths" />
+108-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:18:17-72
+109        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+110        <service
+110-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-33:19
+111            android:name="com.google.android.gms.metadata.ModuleDependencies"
+111-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-78
+112            android:enabled="false"
+112-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-36
+113            android:exported="false" >
+113-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+114            <intent-filter>
+114-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-28:29
+115                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+115-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-94
+115-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-91
+116            </intent-filter>
+117
+118            <meta-data
+118-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:36
+119                android:name="photopicker_activity:0:required"
+119-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-63
+120                android:value="" />
+120-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:32:17-33
+121        </service>
+122
+123        <activity
+123-->[:url_launcher_android] D:\OralAIApp\OralAIApp\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+124            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+124-->[:url_launcher_android] D:\OralAIApp\OralAIApp\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+125            android:exported="false"
+125-->[:url_launcher_android] D:\OralAIApp\OralAIApp\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+126            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+126-->[:url_launcher_android] D:\OralAIApp\OralAIApp\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+127
+128        <provider
+128-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-27:20
+129            android:name="com.crazecoder.openfile.FileProvider"
+129-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-64
+130            android:authorities="com.example.untitled.fileProvider.com.crazecoder.openfile"
+130-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-88
+131            android:exported="false"
+131-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-37
+132            android:grantUriPermissions="true" >
+132-->[:open_filex] D:\OralAIApp\OralAIApp\build\open_filex\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-47
+133            <meta-data
+133-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-18:75
+134                android:name="android.support.FILE_PROVIDER_PATHS"
+134-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-67
+135                android:resource="@xml/filepaths" />
+135-->[:image_picker_android] D:\OralAIApp\OralAIApp\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:18:17-72
+136        </provider>
+137        <provider
+137-->[androidx.emoji2:emoji2:1.2.0] C:\Users\11730\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+138            android:name="androidx.startup.InitializationProvider"
+138-->[androidx.emoji2:emoji2:1.2.0] C:\Users\11730\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+139            android:authorities="com.example.untitled.androidx-startup"
+139-->[androidx.emoji2:emoji2:1.2.0] C:\Users\11730\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+140            android:exported="false" >
+140-->[androidx.emoji2:emoji2:1.2.0] C:\Users\11730\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+141            <meta-data
+141-->[androidx.emoji2:emoji2:1.2.0] C:\Users\11730\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+142                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+142-->[androidx.emoji2:emoji2:1.2.0] C:\Users\11730\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+143                android:value="androidx.startup" />
+143-->[androidx.emoji2:emoji2:1.2.0] C:\Users\11730\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+144            <meta-data
+144-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\11730\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+145                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+145-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\11730\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+146                android:value="androidx.startup" />
+146-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\11730\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+147            <meta-data
+147-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+148                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+148-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+149                android:value="androidx.startup" />
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+150        </provider>
+151
+152        <uses-library
+152-->[androidx.window:window:1.0.0-beta04] C:\Users\11730\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+153            android:name="androidx.window.extensions"
+153-->[androidx.window:window:1.0.0-beta04] C:\Users\11730\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+154            android:required="false" />
+154-->[androidx.window:window:1.0.0-beta04] C:\Users\11730\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+155        <uses-library
+155-->[androidx.window:window:1.0.0-beta04] C:\Users\11730\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+156            android:name="androidx.window.sidecar"
+156-->[androidx.window:window:1.0.0-beta04] C:\Users\11730\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+157            android:required="false" />
+157-->[androidx.window:window:1.0.0-beta04] C:\Users\11730\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+158
+159        <receiver
+159-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+160            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+160-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+161            android:directBootAware="false"
+161-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+162            android:enabled="true"
+162-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+163            android:exported="true"
+163-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+164            android:permission="android.permission.DUMP" >
+164-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+165            <intent-filter>
+165-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+166                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+166-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+166-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+167            </intent-filter>
+168            <intent-filter>
+168-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+169                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+169-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+169-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+170            </intent-filter>
+171            <intent-filter>
+171-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+172                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+172-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+172-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+173            </intent-filter>
+174            <intent-filter>
+174-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+175                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+175-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+175-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\11730\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+176            </intent-filter>
+177        </receiver>
+178    </application>
+179
+180</manifest>

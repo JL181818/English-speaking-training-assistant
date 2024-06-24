@@ -3,6 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:untitled/pages/history_list.dart';
+import 'package:untitled/utils/theme.dart';
 import './pages/main_page.dart';
 import './services/web/url.dart';
 import './pages/login.dart';
@@ -12,7 +13,9 @@ import 'dart:async';
 
 void main() {
   runApp(
-    const GetMaterialApp(
+     GetMaterialApp(
+      themeMode: ThemeMode.light,
+      theme: GlobalThemData.lightThemeData,
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
     )
