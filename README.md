@@ -11,6 +11,8 @@
 
 **进度跟踪**：随着时间的推移监控你的进度，以保持动力并跟踪你的进步，数据库持久化存储
 
+**高并发**: 在开发环境下测试能够维持持续3000并发，瞬时6000并发。
+
 ## Authors
 排名不分先后
 
@@ -41,3 +43,11 @@ bash scripts/download_models.sh
 ```bash
 python server.py
 ```
+
+## 后端部署
+
+需在服务器上部署MySQL与Redis，并按照实际需求与网络环境配置application.yml，并通过maven打包为jar文件，之后通过下列指令运行。
+```
+java -jar {你的jar包文件名}.jar
+```
+因后端会映射同级目录的static文件夹到/static/xxx的url上，所以推荐为后端配置CDN。
