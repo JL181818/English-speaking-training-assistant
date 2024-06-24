@@ -56,3 +56,8 @@ python server.py
 java -jar {你的jar包文件名}.jar
 ```
 因后端会映射同级目录的static文件夹到/static/xxx的url上，所以推荐为后端配置CDN。
+
+## 前端运行
+
+安装最新版Android Studio与Flutter框架，依据程序内提示或报错信息配置相关文件。
+请确保各配置文件的版本与项目版本兼容
