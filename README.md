@@ -8,7 +8,7 @@
 **进度跟踪**：随着时间的推移监控你的进度，以保持动力并跟踪你的进步
 
 ## 模型环境配置和模型文件下载：
-'''
+```bash
 conda create -n speakspark python=3.10
 
 conda activate speakspark
@@ -22,8 +22,10 @@ cd avatar
 pip install -r requirements.txt
 
 bash scripts/download_models.sh
-'''
+```
+
 ## 模型部署
-'''
+
+```bash
 python server.py
-'''
+```
