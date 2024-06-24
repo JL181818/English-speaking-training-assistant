@@ -23,6 +23,7 @@
 
 ## 大模型微调和量化
 利用[Xtuner](https://github.com/InternLM/xtuner)框架进行微调，微调数据集为daily_dialog
+
 量化利用微软的[turbomind](https://github.com/InternLM/lmdeploy)
 
 ## 模型环境配置和模型文件下载：
