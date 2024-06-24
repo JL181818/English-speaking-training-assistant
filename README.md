@@ -12,10 +12,12 @@
 **进度跟踪**：随着时间的推移监控你的进度，以保持动力并跟踪你的进步，数据库持久化存储
 
 ## Authors
+排名不分先后
 
-- [Author One](https://example.com/author1) - Role/Contribution
-- [Author Two](https://example.com/author2) - Role/Contribution
-- [Author Three](https://example.com/author3) - Role/Contribution
+- [Panyu]() - 前端
+- [Jielirong](https://github.com/JL181818) - 模型
+- [Guan Yunpeng](https://github.com/SKgtsa) - 后端
+- [stroll](https://github.com/Idonotkownwho) - 后端
 
 ## 模型环境配置和模型文件下载：
 ```bash
