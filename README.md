@@ -21,6 +21,10 @@
 - [Guan Yunpeng](https://github.com/SKgtsa) - 后端
 - [Peng Shuaihao](https://github.com/Idonotkownwho) - 后端
 
+## 大模型微调和量化
+利用[Xtuner](https://github.com/InternLM/xtuner)框架进行微调，微调数据集为daily_dialog
+量化利用微软的[turbomind](https://github.com/InternLM/lmdeploy)
+
 ## 模型环境配置和模型文件下载：
 ```bash
 conda create -n speakspark python=3.10
